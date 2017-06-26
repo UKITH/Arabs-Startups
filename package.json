@@ -7,6 +7,7 @@
     "test": "tests"
   },
   "scripts": {
+    "start": "node ./src/start_server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "report-coverage": "cat ./coverage/lcov.info"
   },
@@ -22,5 +23,8 @@
   "homepage": "https://github.com/UKITH/Arabs-Startups#readme",
   "devDependencies": {
     "codecov": "^2.2.0"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
   }
 }
