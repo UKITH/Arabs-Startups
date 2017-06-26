@@ -40,8 +40,8 @@ Tools to integrate with Github:
 * Travis
 
 Plan:
-26/6 Folder Structure, Codecov, Travis, setup testing, setup express server, setup db, setup hbs
-27/6 Folder Structure, Codecov, Travis, setup testing, setup express server, setup db, setup hbs
+26/6 Folder Structure, Codecov, Travis, setup testing, setup express server, setup db, setup hbs, webpack
+27/6 Folder Structure, Codecov, Travis, setup testing, setup express server, setup db, setup hbs, webpack
 28/6 Search engine +  startup profile page + results page + submission form
 3/7 Search engine +  startup profile page + results page + submission form
 4/7 Search engine +  startup profile page + results page + submission form
