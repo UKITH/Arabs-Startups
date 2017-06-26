@@ -1,30 +1,40 @@
-# Defining the Problem
+# UX: INITIAL RESEARCH
 
-Israel boasts the second-largest collection of fledgling tech companies in the world, after Silicon Valley.
+# Defining The Problem
+
+Israel boasts the **second-largest collection of fledgling tech companies in the world**, after Silicon Valley.
 Over the past decade, 7,000 tech companies have been founded in Israel, where high-tech goods and services account for 12.5% of GDP.
 BUT only 30 Arab-led tech firms, the majority of them in software, are making money.
+
 Source = http://www.haaretz.com/israel-news/business/1.664377
 
-"A fifth of the population, Israel’s 1.7 million Arabs, are only marginal participants in Start-Up Nation. Only 2 percent of Israeli technology workers are Arab."
+"A fifth of the population, Israel’s 1.7 million Arabs, are only marginal participants in Start-Up Nation. **Only 2% of Israeli technology workers are Arab**."
+
 Source="https://www.bloomberg.com/news/articles/2014-11-26/what-its-like-to-run-an-arab-tech-startup-in-israel#r=hpt-ls"
 
 ### Why?
 
-- **Scarce funding**
+- #### **Scarce funding**
+
 Access to funding from private sources is the biggest challenge.
-Most Israeli Arabs, Muslim and Christian, live in the north and the interior, not in greater Tel Aviv, where the global tech companies, startups, and investors are concentrated.
+Most Israeli Arabs, Muslim and Christian, live in the north and the interior, not in greater Tel Aviv, where the global tech companies, startups, and Investors are concentrated.
 Nazareth is a 90-minute drive from Tel Aviv; it is not on the radar of most investors.
 Arabic investors prefer more traditional ventures, such as Real Estate.
 
-- **Entrenched discrimination**
+- #### **Entrenched discrimination**
+
 There is no legal guarantee of full equality for Jewish and Arab citizens.
 It has been described as "institutionalised discrimination".  
-"Palestinians face systematic discrimination merely because of their race, ethnicity, and national origin, depriving them of electricity, water, schools, and access to roads, while nearby Jewish settlers enjoy all of these state-provided benefits" -- Human Rights Watch, 2010.
+"Palestinians face systematic discrimination merely because of their race, ethnicity, and national origin, depriving them of electricity, water, schools, and access to roads, while nearby Jewish settlers enjoy all of these state-provided benefits" -- *Human Rights Watch, 2010*.
+
 Source = http://www.aljazeera.com/indepth/opinion/2016/02/israel-racism-law-160224111623370.html
+
 "Today relations between Israel’s Arabs and Jews are as tense as they’ve been in years"
+
 Source="https://www.bloomberg.com/news/articles/2014-11-26/what-its-like-to-run-an-arab-tech-startup-in-israel#r=hpt-ls"
 
-- **Cultural**
+- #### **Cultural**
+
 There is a narrow vision of professional success among the Arab population.
 Israeli Arab children go to schools that are different from and usually inferior to those of their Jewish peers.
 A young Israeli Arab who shows promise in school is often expected to become a doctor or, perhaps, a lawyer.
@@ -33,13 +43,17 @@ There’s fear of the government and whether it will hinder Arab-owned businesse
 Source="https://www.bloomberg.com/news/articles/2014-11-26/what-its-like-to-run-an-arab-tech-startup-in-israel#r=hpt-ls"
 
 
-- **No military service**
+- #### **No military service**
+
 Few Arabs engage in military service, which is a primary source of innovation in Israel.
 Israeli Jews have the opportunity to learn tech skills and find likeminded people to collaborate with during their time in the military.
 The arab population is cut out of this closed loop.
 "A disproportionate number of the nation’s startups have come out of elite intelligence units, which select young men and women for their smarts and technological skills, train them extensively, then release them into the workforce in their mid-20s. Israeli Arabs are exempt from the draft, and most don’t volunteer, feeling that doing so would effectively be taking up arms against their brethren in the occupied territories and neighboring countries."
+
 Source="https://www.bloomberg.com/news/articles/2014-11-26/what-its-like-to-run-an-arab-tech-startup-in-israel#r=hpt-ls"
+
 It's tough for arab engineers to find employment, when many jobs are with defence-related companies, which are closed to Arabs.
+
 Source="https://www.bloomberg.com/news/articles/2014-11-26/what-its-like-to-run-an-arab-tech-startup-in-israel#r=hpt-ls"
 
 ### Current Progress
@@ -55,13 +69,13 @@ Israel's Arab minority is seeking its share of success in a "startup nation".
 
 ### Wider Social Impact
 
-"Entrepreneurs in Nazareth can be the bridge between Israel and 400 million Arabs [around the Middle East]" -- Palestinian Businessman, Abdul Malik Al Jaber
+"Entrepreneurs in Nazareth can be the bridge between Israel and 400 million Arabs [around the Middle East]" -- *Palestinian Businessman, Abdul Malik Al Jaber*
 
 Imagine the impact this would have on the peace process (peace negotiations have frozen since April last year).
 
 ### Goals
 
-#### More success stories. More visibility for Arab-led startups. More interest from Investors.
+#### => More success stories. More visibility for Arab-led startups. More interest from Investors.
 
 
 # Case Studies Of Stakeholders
@@ -71,6 +85,7 @@ Imagine the impact this would have on the peace process (peace negotiations have
  "The Younises’ big break came in 2000, when Medtronic, the medical device giant, introduced a form of therapy for Parkinson’s disease that involved planting electrodes in the brain. The electrodes had to be directed to just the right spot, and the couple realized that a product they already made could do that. They cobbled together a prototype, flew to the U.S., and drove across the country, hitting all the top brain centers.
 By the end of the year they had their first clients, and in 2003 the Younises moved to Atlanta for two years to be closer to the American hospitals that were their primary market. It wasn’t a foregone conclusion that they would move back. But the idea of basing their company in Nazareth was important. “I decided we were doing it the hard way,” Reem says with a laugh. “We were going through the little door, not the wide door.”
 The door, in Nazareth, is now wider, thanks in part to the Younises. Today the company takes up one floor of a hulking new office building on an otherwise bare hilltop outside Nazareth. It employs 60 people, and as in the city itself, most are Arab. The company’s “GPS systems for neurosurgeons” are in 500 research labs and hospitals around the world. And, as Reem points out with pride, several former employees have left and started three companies of their own."
+
 Source="https://www.bloomberg.com/news/articles/2014-11-26/what-its-like-to-run-an-arab-tech-startup-in-israel#r=hpt-ls"
 
 
@@ -82,6 +97,7 @@ Founder Jamil R. Mazzawi is an experienced engineer and Technicon Computer Scien
 "Mazzawi is also an Arab, though, and that makes everything harder. He grew up in a working-class neighborhood in Nazareth, a mostly Arab city culturally remote from Israel’s social and financial capitals. Having battled his way into the Technion from a largely vocational high school, he struggled to keep up with his better-prepared classmates. When he graduated and first sent out applications for jobs he felt well qualified for, he didn’t hear back from a single employer—a story common among Arab engineers.
 "Since starting his company, he’s found it difficult to find advice and funding. “If I was Jewish,” he says, “I would have two or three uncles or friends who have money and who are willing to invest and risk money in order to maybe make money. In Arab society, this culture doesn’t exist of ‘Let’s invest in high tech to make money.’ ”
 “They’ll ask certain questions, and to get answers you need to talk to people. **With my limited network, it’s harder to get this information**,” he says. “**That’s what I’m missing**.”
+
 Source=https://www.bloomberg.com/news/articles/2014-11-26/what-its-like-to-run-an-arab-tech-startup-in-israel#r=hpt-ls
 
 ### Investors: [Israeli Chief Scientist's Office](http://www.israelbusiness.org.il/financialassistance/rdfound)
@@ -93,7 +109,7 @@ An incubator program with R&D funds based in Jerusalem, est. 1991. It has grown 
 
 # User Profiles, Journeys, and Stories
 
-#### User 1: Startup Company With 2 Arab Founders
+## User 1: Startup Company With 2 Arab Founders
 ##### User Profile
 A software solutions startup in Nazareth in its idea phase.
 The two Arab Founders are looking for funding from an Investor. But they don't know how to reach out to Investors and they don't have a network in place.
@@ -109,7 +125,7 @@ As a Founder who does not have access to an extensive network,
 I want my startup's online presence to be easily accessible, concise, impressive, and share-worthy,
 so that potential investors and stakeholders want to contact me.  
 
-#### User 2: University Student at Technicon in Haifa
+## User 2: University Student at Technicon in Haifa
 #### User Profile
 This 20-year-old Arab University student is considering starting her own tech company next year, but she doesn't know anyone in the industry, and her parents would rather she takes a more traditional career path.
 ##### User Journey
@@ -123,12 +139,12 @@ As a budding entrepreneur,
 I want to be able to see how others like me have been able to succeed in business,
 so that I feel I am not alone.
 
-#### User 3: Private Investor in Tel Aviv
+## User 3: Private Investor in Tel Aviv
 A Private Investor in Tel Aviv who has heard that the tech scene in Nazareth is flourishing. He wants to take advantage of the untapped potential of arab startups, but he isn't sure where to find them.
 #### User Journey --> Central Point Of Information
 He comes across a platform where multiple arab startups are listed. He can browse these startups without having to do lots of research, or even leave the web app.
 
-#### User 4: Private Investor in Tel Aviv
+## User 4: Private Investor in Tel Aviv
 One of the Private Investors in Tel Aviv with an established portfolio of tech startups.
 ##### User Journey
 Market trends show that Health Tech is a growing sector, so he would like to invest in some Health Tech startups. He begins his search at an online platform where and finds a range of Health Tech startups to choose from.
@@ -137,12 +153,12 @@ As an Investor in tech startups,
 I want to be able to search for startups according to sector,
 so that I can find what's right for my portfolio.
 
-#### User 5: Decision Board For Grant Funding
+## User 5: Decision Board For Grant Funding
 We've received an application for a grant. We don't often receive applications from Arab Founders, but we will consider funding them.
 #### User Journey --> "Official" Aesthetic
 We do a background check on the startup online. Not only do we find the startup's website, but we also find a listing on an official-looking website with lots of other inspiring companies. This shows a level of credibility, and it convinces us that arab startups are investable. We offer the funding.
 
-#### User 6: Startup employee
+## User 6: Startup employee
 An Arab startup employee who wants to integrate with the startup community, but feels as if she doesn't belong.
 #### User Journey
 She goes on the startup platform and comes across the events listings with information about upcoming talks, gathering, hackathons, etc. Here she meets other people in a similar position.
@@ -151,7 +167,7 @@ As a startup employee,
 I want to be able to participate in tech innovation events,
 so that I can network, learn from peers, and grow my community.
 
-#### User 7: International Tech Journalist
+## User 7: International Tech Journalist
 An international journalist needs to do some research for their feature on the top 10 startups in Israel this year.
 #### User Journey
 She comes across a startup platform which showcases Arab startups. Some of these startups are excellent candidates for her article. She can see what press coverage they have had in the past.
@@ -163,9 +179,11 @@ so that I know which ones are hot topics or untapped potential.
 
 # Existing Platforms In The Field
 
-- [Start-up Nation Central](https://www.startupnationcentral.org/)
-- [F6S](https://www.f6s.com/)
-- [Startbase](http://www.startbase.co/index)
+- ### [Start-up Nation Central](https://www.startupnationcentral.org/)
+
+- ### [F6S](https://www.f6s.com/)
+
+- ### [Startbase](http://www.startbase.co/index)
 
 # User Flow
 
