@@ -1,0 +1,26 @@
+{
+  "name": "arabs-startups",
+  "version": "1.0.0",
+  "description": "A web application to make Arabs startups more accessible for Investors and to enhance interest in the Arab Hi-tech scene.",
+  "main": "webpack.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "report-coverage": "cat ./coverage/lcov.info"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UKITH/Arabs-Startups.git"
+  },
+  "author": "Mario and Suha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UKITH/Arabs-Startups/issues"
+  },
+  "homepage": "https://github.com/UKITH/Arabs-Startups#readme",
+  "devDependencies": {
+    "codecov": "^2.2.0"
+  }
+}
