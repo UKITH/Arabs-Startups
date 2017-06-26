@@ -20,6 +20,7 @@ Timetable
 Sprints goals:
 * Search engine to look for startups
 * Profile page for each startup
+* Results page
 * Submission form for startups who wants to be on the website
 * Design, UX/UI.
 * Stretch goal: News section
