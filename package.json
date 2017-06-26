@@ -8,8 +8,9 @@
   },
   "scripts": {
     "start": "node ./src/start_server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "report-coverage": "cat ./coverage/lcov.info"
+    "test": "node ./tests/index.js",
+    "coverage": "istanbul cover ./tests/index.js",
+    "report-coverage": "codecov"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,7 @@
   },
   "dependencies": {
     "express": "^4.15.3"
+    "istanbul": "^0.4.5",
+    "tape": "^4.6.3"
   }
 }
