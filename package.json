@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/UKITH/Arabs-Startups#readme",
   "devDependencies": {
-    "codecov.io": "^0.1.6"
+    "codecov": "^2.2.0"
   }
 }
