@@ -5,6 +5,7 @@ mongoose.connect('mongodb://suha:shukran1@ds139082.mlab.com:39082/arab-startups'
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
+  // We are connected
 });
 
 const startupSchema = mongoose.Schema({
