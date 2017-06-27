@@ -38,6 +38,8 @@
     "mongodb": "^2.2.29",
     "mongoose": "^4.11.0",
     "express-handlebars": "^3.0.0",
-    "webpack": "^3.0.0"
-  }
+    "webpack": "^3.0.0",
+    "handlebars-loader": "^1.5.0"
+  },
+
 }
