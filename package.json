@@ -7,9 +7,10 @@
     "test": "tests"
   },
   "scripts": {
+    "start": "node ./src/start_server.js",
     "test": "node ./tests/index.js",
     "coverage": "istanbul cover ./tests/index.js",
-    "report-coverage": "cat ./coverage/lcov.info"
+    "report-coverage": "codecov"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,8 @@
     "codecov": "^2.2.0",
     "istanbul": "^0.4.5",
     "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
   }
 }
