@@ -28,6 +28,7 @@
     "tape": "^4.6.3"
   },
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0"
   }
 }
