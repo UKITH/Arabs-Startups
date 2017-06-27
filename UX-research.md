@@ -179,12 +179,36 @@ so that I know which ones are hot topics or untapped potential.
 
 # Existing Platforms In The Field
 
+These three platforms have common features which are useful to look at:
+- Search by category or keyword
+- List of startups
+- Profile page of startup
+
 - ### [Start-up Nation Central](https://www.startupnationcentral.org/)
+A platform for Israeli innovation based in Tel Aviv. According to testimonials, it is used by foreign businesses/investors who want to find partnerships/collaborators or potential investments or set up a company in Israel. Startup Nation Central also help with strategy and navigating the Israeli market.
+So they target investors (mainly), corporates, governments, and academia.  
+They have an active and large social media following.  
+
+_You can find Arab companies by searching by location in Arab cities._
+
+[Here](http://finder.startupnationcentral.org/c/surance-io) is an example profile page for a startup.
 
 - ### [F6S](https://www.f6s.com/)
+F6S has international profiles and broader aims:
+"Connect with Accelerators, Funds & Investors.
+Get help with free stuff, talent search & exposure.
+Grow your Startup in the \#1 global community."
+Users sign in to create a profile and browse other profiles.
+There are jobs listings and it syncs with LinkedIn.
+"F6S is home to 1.5 million tech founders, 600k startups and more than 12,000 startup programs globally. F6S delivers founders more than $1 billion per year in opportunities, funding, grants and services.
+F6S founders apply to startup programs (including accelerators), pitch investment funds, post or apply for jobs, get free founder benefits and grow on F6S every day."
+
+[Here](https://www.f6s.com/newhaircut/about) is an example profile page for a startup.
 
 - ### [Startbase](http://www.startbase.co/index)
+_and [Start Israel](http://www.startisrael.co.il/)_
+Looks like a newspaper website -- there is a lot of content all trying to catch your attention.
+It isn't clear what the page wants you to do, apart from browse.
+Lots of useful buttons are hard to find. Like "Join as a partner", tucked away in the footer.
 
-# User Flow
-
-# Wireframing
+[Here](http://www.startbase.co/startup/view/jovo) is an example profile page for a startup.
