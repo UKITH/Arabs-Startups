@@ -1,5 +1,5 @@
 const path = require('path');
-
+const nodeExternals = require('webpack-node-externals');
 module.exports = {
   entry: './src/server.js',
   output: {
@@ -12,7 +12,19 @@ module.exports = {
         test: /\.hbs$/,
         exclude: /node_modules/,
         loader: 'handlebars-loader'
-    }]
+    },
+    {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env']
+          }
+        }
+    }
+  ]
   },
-  target: 'node'
+  target: 'node',
+  externals: [nodeExternals()]
 };
