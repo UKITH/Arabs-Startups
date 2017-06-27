@@ -1,13 +1,5 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://suha:shukran1@ds139082.mlab.com:39082/arab-startups');
-
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', () => {
-  // We are connected
-});
-
 const startupSchema = mongoose.Schema({
   founderName: {type: String, required: true},
   startupName: {type: String, required: true, unique: true},
@@ -26,11 +18,12 @@ const hardware = mongoose.model('Hardware', startupSchema);
 const software = mongoose.model('Software', startupSchema);
 const lifeScience = mongoose.model('Life Sciences', startupSchema);
 const eCommerce = mongoose.model('E-Commerce and Fintech', startupSchema);
-const education = mongoose.model('Education and Knowledge Technologies');
+const education = mongoose.model('Education and Knowledge Technologies', startupSchema);
 const cities = mongoose.model('Smart & Safe Cities/Homes', startupSchema);
 const other = mongoose.model('Other', startupSchema);
 
 module.exports = {
+  startupInfoTable,
   health,
   it,
   security,
