@@ -3,11 +3,14 @@ A web application to make Arabs startups more accessible for Investors and to en
 
 Collaboration between Founders & Coders and the British Embassy in Israel
 
+[![Build Status](https://travis-ci.org/UKITH/Arabs-Startups.svg?branch=master)](https://travis-ci.org/UKITH/Arabs-Startups)
+[![codecov](https://codecov.io/gh/UKITH/Arabs-Startups/branch/master/graph/badge.svg)](https://codecov.io/gh/UKITH/Arabs-Startups)
+
 
 Team
 * Product owner - British Embassy
 * Developer - Mario Saliba
-* Developer - Suha Edres
+* Developer - Suha Edris
 * UX/UI - Lucy Sabin
 * QA/Scrum master - Esraa Jbara
 
@@ -31,7 +34,7 @@ Stack:
 * Client side: Vanilla JS
 * Database: mongodb + mongoose
 * Views engine: Handlebars
-* Files bundling: Webpack
+* Files bundling: ~~Webpack~~
 * CSS Library: Tachyons
 * Testing: Tape, Istanbul
 
@@ -40,12 +43,12 @@ Tools to integrate with Github:
 * Travis
 
 Plan:
-* 26/6 Folder Structure, Codecov, Travis, setup testing, setup express server, setup db, setup hbs, webpack
-* 27/6 Folder Structure, Codecov, Travis, setup testing, setup express server, setup db, setup hbs, webpack
+* 26/6 Folder Structure, Codecov, Travis, setup testing, setup express server, setup db, setup hbs, ~~webpack~~
+* 27/6 Folder Structure, Codecov, Travis, setup testing, setup express server, setup db, setup hbs, ~~webpack~~
 * 28/6 Search engine,  startup profile page, results page, submission form
 * 3/7 Search engine,  startup profile page, results page, submission form
 * 4/7 Search engine,  startup profile page, results page, submission form
-* 5/7 CSS 
+* 5/7 CSS
 * 17/7 Events section
 * 18/7 Events section
 * 19/7 News section
