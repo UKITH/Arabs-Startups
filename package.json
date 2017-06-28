@@ -10,7 +10,8 @@
     "start": "node ./src/start_server.js",
     "test": "node ./tests/index.js",
     "coverage": "istanbul cover ./tests/index.js",
-    "report-coverage": "codecov"
+    "report-coverage": "codecov",
+    "build": "webpack --config webpack.config.js --watch --progress"
   },
   "repository": {
     "type": "git",
@@ -23,14 +24,21 @@
   },
   "homepage": "https://github.com/UKITH/Arabs-Startups#readme",
   "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-preset-env": "^1.5.2",
     "codecov": "^2.2.0",
     "istanbul": "^0.4.5",
-    "tape": "^4.6.3"
+    "tape": "^4.6.3",
+    "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
     "express": "^4.15.3",
+    "handlebars-loader": "^1.5.0",
     "mongodb": "^2.2.29",
     "mongoose": "^4.11.0",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
+    "webpack": "^3.0.0",
+    "handlebars-loader": "^1.5.0"
   }
 }
