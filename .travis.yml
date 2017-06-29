@@ -3,7 +3,6 @@ node_js:
   - "v7"
 
 install:
-  - npm install -g codecov
+  - npm install
 script:
-  - istanbul cover ./src/server.js --reporter lcovonly -- -R spec
-  - codecov -t bbdd1ef4-08d9-4645-89ac-9c62aa100b20
+  - npm test
