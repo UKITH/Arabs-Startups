@@ -2,8 +2,8 @@ language: node_js
 node_js:
   - "v7"
 
-before install:
-  - pip install --user codecov
-
-after success:
+install:
+  - npm install -g codecov
+script:
+  - istanbul cover ./src/server.js --reporter lcovonly -- -R spec
   - codecov -t bbdd1ef4-08d9-4645-89ac-9c62aa100b20
