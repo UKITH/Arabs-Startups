@@ -212,3 +212,12 @@ It isn't clear what the page wants you to do, apart from browse.
 Lots of useful buttons are hard to find. Like "Join as a partner", tucked away in the footer.
 
 [Here](http://www.startbase.co/startup/view/jovo) is an example profile page for a startup.
+
+- ### [ABstartups](https://abstartups.com.br/)
+"ABStartups exists to build the ideal environment for startups to transform the country. We inspire, empower, connect and advocate for startups, because we believe in the role of innovation as a driver of positive transformation for the country."
+
+- ### [Startups.co](https://www.startups.co/search?query=fintech&tab=all)
+Search feature on landing page
+
+- ### [Angel List](https://angel.co/companies?keywords=health)
+Search feature with dropdown advanced options underneath
