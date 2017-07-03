@@ -1,3 +1,3 @@
-module.exports = (req, res)=> {
+module.exports = (req, res) => {
   res.render('search_home')
 }
