@@ -1,0 +1,74 @@
+<div class="">
+  <h1>Submit your own startup!</h1>
+</div>
+
+<form class="" action="/registerStartup" method="post">
+
+  <fieldset>
+    <label for="startup-name">Startup Name: </label>
+    <input type="text" name="startup-name" id="startup-name" required>
+  </fieldset>
+
+  <fieldset>
+    <label for="founder-name">Founder/Co-Founder name: </label>
+    <input type="text" name="founder-name" id="founder-name" required>
+  </fieldset>
+
+  <fieldset>
+    <label for="description_textarea">Startup Description:</label>
+    <textarea rows="8" cols="80" id="description_textarea" required></textarea>
+  </fieldset>
+
+  <fieldset>
+    <label for="select-field">Startup Field: </label>
+    <select id="select-field" name="Select">
+      <option value="health">Health</option>
+      <option value="it">IT</option>
+      <option value="security">Security</option>
+      <option value="hardware">Hardware</option>
+      <option value="software">Software</option>
+      <option value="lifeScience">Life Sciences</option>
+      <option value="eCommerce">E-Commerce</option>
+      <option value="education">Education</option>
+      <option value="cities">Cities</option>
+      <option value="other">Other</option>
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <label for="startup-stage">Startup Stage: </label>
+    <input type="text" name="startup-stage" id="startup-stage" required>
+  </fieldset>
+
+  <fieldset>
+    <label for="upload-logo">Upload your startup's logo: </label>
+    <input type="file" name="upload-logo" id="upload-logo" required>
+  </fieldset>
+
+  <fieldset>
+    <label for="startup-email">Startup email: </label>
+    <input type="email" name="startup-email" id="startup-email" required>
+  </fieldset>
+
+  <fieldset>
+    <label for="founder-number">Phone Number: </label>
+    <input type="tel" name="founder-number" id="founder-number">
+  </fieldset>
+
+  <fieldset>
+    <label for="startup-website">Startup's Website</label>
+    <input type="text" name="startup-website" id="startup-website" required>
+  </fieldset>
+
+  <fieldset>
+    <label for="facebook-link">Facebook</label>
+    <input type="text" name="facebook-link" id="facebook-link">
+    <label for="twitter-link">Twitter</label>
+    <input type="text" name="twitter-link" id="twitter-link">
+    <label for="linkedin-link">LinkedIn</label>
+    <input type="text" name="linkedin-link" id="linkedin-link">
+  </fieldset>
+
+  <input type="submit" name="submit" value="Submit">
+
+</form>
