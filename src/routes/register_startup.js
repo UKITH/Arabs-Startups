@@ -1,10 +1,10 @@
-const fs = require('fs');
-const path = require('path');
-
-const filePath = path.join(__dirname, '../', 'mock_data.js');
+const { oneTimeCollection } = require('../../database/schema.js');
 
 module.exports = (req, res) => {
-  console.log(req.body);
-  
-  res.redirect('/')
+  const startup = new oneTimeCollection(req.body);
+  startup.save((err) => {
+    if (err) return err
+  })
+  console.log(oneTimeCollection);
+  res.redirect('/');
 }
