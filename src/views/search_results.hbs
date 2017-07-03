@@ -1,0 +1,26 @@
+{{>nav-bar}}
+
+<div class="">
+ <div class="">
+    <form class="" action="registerStartup" method="post">
+      <fieldset>
+        <input type="text" name="search" placeholder="Search">
+        <input type="submit">
+      </fieldset>
+    </form>
+
+    <!-- Sector Filter -->
+    <!-- Funding Stage Filter -->
+  </div>
+
+  <div class="">
+    <h1>Startups</h1>
+
+    {{#each startups}}
+      <div class="">
+        <img src="" alt="">
+        <h3>{{this.startups}}</h3>
+      </div>
+    {{/each}}
+  </div>
+</div>
