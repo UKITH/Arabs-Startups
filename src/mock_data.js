@@ -2,7 +2,7 @@ module.exports = {
   data: [{
     founderName: 'mavis',
     startupName: 'something',
-    phoneNumber: '0524645',
+    startupDescription: 'something something something',
     startupField: 'software',
     founderEmail: 'haha@gmail.com',
     startupStage: 'funded',
