@@ -1,29 +1,16 @@
 <div class="">
-  <div>
-    <img class="" src="./assets/fac.png" alt="">
+  <div class="">
+    <h2 class="">{{startup.startupName}}</h2>
   </div>
   <div class="">
-    <h2 class="">{{this.startupName}}</h2>
-  </div>
-  <div class="">
-    <span class="">{{this.founderName}}</span>
-    <span class="">{{this.phoneNumber}}</span>
-    <span class="">{{this.email}}</h2>
-    <span class="">{{this.startupField}}</span>
+    <span class="">{{startup.founderName}}</span>
+    <span class="">{{startup.phoneNumber}}</span>
+    <span class="">{{startup.founderEmail}}</h2>
+    <span class="">{{startup.startupField}}</span>
     <div class="">
-      <p class="">{{this.startupDescription}}</p>
+      <p class="">{{startup.startupDescription}}</p>
     </div>
-    <span class="">{{this.startupStage}}</span>
-    <a class="" href={{this.websiteLink}}></a>
+    <span class="">{{startup.startupStage}}</span>
+    <a class="" href={{startup.startupWebsite}}></a>
   </div>
-  <div class="">
-    {{#if this.facebookLink}}
-    <a class="" href={{this.facebookLink}}></a>
-    {{/if}}
-    {{#if this.linkedinLink}}
-    <a class=" " href={{this.linkedinLink}}></a>
-    {{/if}}
-    {{#if this.twitterLink}}
-    <a class="" href={{this.twitterLink}}></a>
-    {{/if}}
 </div>
