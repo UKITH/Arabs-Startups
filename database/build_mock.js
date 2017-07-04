@@ -12,6 +12,8 @@ db.once('open', () => {
   const startup = new mockCollection(mockData.data[0])
   startup.save((error, res) => {
     if(error) console.log(error);
-    console.log('startup added');
+    else {
+      console.log('startup added');
+    }
   })
 });
