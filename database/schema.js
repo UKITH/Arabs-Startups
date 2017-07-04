@@ -4,9 +4,9 @@ const startupSchema = mongoose.Schema({
   founderName: {type: String, required: true},
   startupName: {type: String, required: true, unique: true},
   startupDescription: {type: String, required: true, unique: true},
-  field: {type: String, required: true},
+  startupField: {type: String, required: true},
   founderEmail: {type: String, required: true},
-  startupStage: {type: String, required: true},
+  startupStage: {type: String},
   startupWebsite: {type: String, required: true}
 });
 
@@ -23,10 +23,9 @@ const education = mongoose.model('Education and Knowledge Technologies', startup
 const cities = mongoose.model('Smart & Safe Cities/Homes', startupSchema);
 const other = mongoose.model('Other', startupSchema);
 
-const oneTimeCollection = mongoose.model('One Time', startupSchema)
+const testCollection = mongoose.model('mockData', startupSchema)
 
 module.exports = {
-  oneTimeCollection,
   startupInfoTable,
   health,
   it,
@@ -37,5 +36,7 @@ module.exports = {
   eCommerce,
   education,
   cities,
-  other
+  other,
+  testCollection,
+  startupSchema
 }
