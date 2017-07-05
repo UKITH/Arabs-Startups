@@ -7,7 +7,6 @@ module.exports = (req, res) => {
     else {
       res.render('startup_profile', {
           startup: startup,
-          back: req.headers.referer
       })
     }
   })
