@@ -1,0 +1,39 @@
+{{>nav-bar}}
+
+<div class="">
+ <div class="">
+    <form class="" action="/search" method="post">
+      <fieldset>
+        <input type="text" name="search" placeholder="Search">
+        <input type="submit">
+      </fieldset>
+
+      <!-- Sector Filter -->
+
+    <fieldset>
+        <label for="funding-stage">Funding Stage </label>
+        <select id="funding-stage" name="Select-stage">
+          <option value="none">Pick One</option>
+          <option value="idea-phase">Idea Phase</option>
+          <option value="prototype">Prototype</option>
+          <option value="seed-funded">Seed Funded</option>
+          <option value="round-a">Round A</option>
+          <option value="bootstrap">Bootstrap</option>
+        </select>
+      </fieldset>
+
+    </form>
+
+  </div>
+
+  <div class="">
+    <h1>Startups</h1>
+
+    {{#each startups}}
+      <div class="">
+        <img src="" alt="">
+        <h3>{{this.startups}}</h3>
+      </div>
+    {{/each}}
+  </div>
+</div>
