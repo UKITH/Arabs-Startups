@@ -36,5 +36,6 @@ module.exports = {
   eCommerce,
   education,
   cities,
-  mockCollection,
+  other,
+  mockCollection
 }
