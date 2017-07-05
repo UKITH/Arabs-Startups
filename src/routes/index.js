@@ -1,10 +1,10 @@
 const router = require('express').Router();
 
 const searchHome = require('./search_home.js');
-const startupProfile = require('./startup_profile.js');
 const submissionForm = require('./submission_form.js');
 const registerStartup = require('./register_startup.js');
 const resultsHandler = require('./results.js');
+const startupProfile = require('./startup_profile.js');
 
 router.get('/', searchHome);
 router.get('/submissionForm', submissionForm);

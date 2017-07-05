@@ -3,12 +3,7 @@ const { mockCollection } = require('../../database/schema.js');
 module.exports = (req, res) => {
   searchWord = req.query.search;
   stage = Object.keys(req.query)[1];
-  console.log(stage);
-  // delete the 3 lines under here
-  // console.log(searchWord);
-  // if(!searchWord || stage === 'none') {
-  //   res.render('search_results')
-  // }
+
   if (searchWord) {
     mockCollection.find({"startupName": searchWord}, (error, startupFound) => {
       if (error) res.render('not_found')
@@ -22,7 +17,6 @@ module.exports = (req, res) => {
 
   if(stage) {
     mockCollection.find({"fundingStage": stage}, (error, startups) => {
-      console.log('THIS OONE', startups);
       if (error) res.render('not_found')
       else {
         res.render('search_results', {
@@ -32,12 +26,8 @@ module.exports = (req, res) => {
     })
   }
 
-  // if (stage && searchWord) {
-  //   mockCollection.find({
-  //     startupName: searchWord,
-  //     fundingStage: stage
-  //   })
-  // }
+  // this is here so ican test the results page
+  // when we have the search engine i'll remove it
   if(!searchWord && !stage){
     res.render('search_results')
   }
