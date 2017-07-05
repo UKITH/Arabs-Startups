@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "node ./src/start_server.js",
+    "start": "nodemon ./src/start_server.js",
     "test": "node ./tests/index.js",
     "coverage": "istanbul cover ./src/server.js && codecov -t bbdd1ef4-08d9-4645-89ac-9c62aa100b20"
   },
@@ -24,13 +24,16 @@
   "devDependencies": {
     "codecov": "^2.2.0",
     "istanbul": "^0.4.5",
+    "supertest": "^3.0.0",
     "tape": "^4.6.3"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
+    "env2": "^2.2.0",
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
     "mongodb": "^2.2.29",
-    "mongoose": "^4.11.0"
+    "mongoose": "^4.11.0",
+    "nodemon": "^1.11.0"
   }
 }
