@@ -4,9 +4,9 @@ const startupSchema = mongoose.Schema({
   founderName: {type: String, required: true},
   startupName: {type: String, required: true, unique: true},
   startupDescription: {type: String, required:true},
-  startupField: {type: String, required: true},
-  founderEmail: {type: String, required: true},
-  startupStage: {type: String, required: true},
+  startupSector: {type: String, required: true},
+  email: {type: String, required: true},
+  fundingStage: {type: String, required: true},
   startupWebsite: {type: String, required: true },
 });
 

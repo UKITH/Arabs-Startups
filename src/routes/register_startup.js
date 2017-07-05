@@ -1,18 +1,16 @@
-const { testCollection } = require('../../database/schema.js');
+const { mockCollection } = require('../../database/schema.js');
 const mongoose = require('mongoose');
 
 module.exports = (req, res) => {
-  let startup = new testCollection({
+  let startup = new mockCollection({
     startupName: req.body['startup-name'],
     founderName: req.body['founder-name'],
     startupDescription: req.body['description'],
-    startupField: req.body.Select,
-    startupStage: req.body['startup-stage'],
-    founderEmail: req.body['startup-email'],
+    startupSector: req.body.Select,
+    fundingStage: req.body['funding-stage'],
+    email: req.body['startup-email'],
     startupWebsite: req.body['startup-website']
   });
-
-  console.log(startup);
 
    startup.save((err) => {
     if (err) {
