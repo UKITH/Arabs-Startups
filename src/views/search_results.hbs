@@ -1,0 +1,35 @@
+<div class="">
+ <div class="">
+    <form class="" action="/search" method="get">
+      <fieldset>
+        <input type="text" name="search" placeholder="Search">
+        <input type="submit">
+      </fieldset>
+
+      <!-- Sector Filter -->
+
+      <fieldset>
+        <label for="funding-stage">Funding Stage: </label>
+        <input type="checkbox" id="funding-stage" name="idea-phase"> Idea Phase
+        <input type="checkbox" id="funding-stage" name="prototype"> Prototype
+        <input type="checkbox" id="funding-stage" name="seed-funded"> Seed Funded
+        <input type="checkbox" id="funding-stage" name="round-a"> Round A
+        <input type="checkbox" id="funding-stage" name="bootstrap"> Bootstrap
+      </fieldset>
+
+    </form>
+
+  </div>
+
+  <div class="">
+    <h1>Startups</h1>
+
+    {{#each startups}}
+      <div class="">
+        <img src="" alt="">
+        <h3>{{this.startupName}}</h3>
+        <a href="/startupProfile/{{_id}}">CLICK ME</a>
+      </div>
+    {{/each}}
+  </div>
+</div>
