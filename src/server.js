@@ -6,7 +6,13 @@ const router = require('./routes/index.js');
 
 const app = express();
 
-app.engine('hbs', hbs({}));
+app.engine('hbs', hbs({
+  defaultLayout: 'main',
+   layoutsDir: path.join(__dirname, './', 'views/layouts'),
+   partialsDir: path.join(__dirname, './', 'views/partials'),
+   extname: 'hbs'
+}));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
