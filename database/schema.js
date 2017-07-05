@@ -3,11 +3,19 @@ const mongoose = require('mongoose');
 const startupSchema = mongoose.Schema({
   founderName: {type: String, required: true},
   startupName: {type: String, required: true, unique: true},
+<<<<<<< HEAD
   startupDescription: {type: String, required: true, unique: true},
   startupField: {type: String, required: true},
   founderEmail: {type: String, required: true},
   startupStage: {type: String},
   startupWebsite: {type: String, required: true}
+=======
+  startupDescription: {type: String, required:true},
+  startupField: {type: String, required: true},
+  founderEmail: {type: String, required: true},
+  startupStage: {type: String, required: true},
+  startupWebsite: {type: String, required: true },
+>>>>>>> master
 });
 
 const startupInfoTable = mongoose.model('startupInfoTable', startupSchema);
@@ -23,7 +31,7 @@ const education = mongoose.model('Education and Knowledge Technologies', startup
 const cities = mongoose.model('Smart & Safe Cities/Homes', startupSchema);
 const other = mongoose.model('Other', startupSchema);
 
-const testCollection = mongoose.model('mockData', startupSchema)
+const mockCollection = mongoose.model('mockData', startupSchema);
 
 module.exports = {
   startupInfoTable,
@@ -36,7 +44,5 @@ module.exports = {
   eCommerce,
   education,
   cities,
-  other,
-  testCollection,
-  startupSchema
+  mockCollection,
 }

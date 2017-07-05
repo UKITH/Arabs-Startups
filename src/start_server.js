@@ -3,7 +3,6 @@ const testCollection = require('../database/schema.js');
 const app = require('./server.js');
 require('env2')('./config.env');
 
-
 mongoose.connect(process.env.DB_URL);
 
 const db = mongoose.connection;
