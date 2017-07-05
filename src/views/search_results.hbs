@@ -2,15 +2,27 @@
 
 <div class="">
  <div class="">
-    <form class="" action="registerStartup" method="post">
+    <form class="" action="/search" method="post">
       <fieldset>
         <input type="text" name="search" placeholder="Search">
         <input type="submit">
       </fieldset>
+
+      <!-- Sector Filter -->
+      
+    <fieldset>
+        <label for="funding-stage">Funding Stage </label>
+        <select id="funding-stage" name="Select-stage">
+          <option value="idea-phase">Idea Phase</option>
+          <option value="prototype">Prototype</option>
+          <option value="seed-funded">Seed Funded</option>
+          <option value="round-a">Round A</option>
+          <option value="bootstrap">Bootstrap</option>
+        </select>
+      </fieldset>
+
     </form>
 
-    <!-- Sector Filter -->
-    <!-- Funding Stage Filter -->
   </div>
 
   <div class="">
