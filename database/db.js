@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require('env2')('./config.env');
 
-mongoose.connect('mongodb://suha:shukran1@ds139082.mlab.com:39082/arab-startups');
+mongoose.connect(process.env.DB_URL);
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
