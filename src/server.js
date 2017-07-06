@@ -7,6 +7,7 @@ const router = require('./routes/index.js');
 const app = express();
 
 app.engine('hbs', hbs({}));
+app.use(express.static('public'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
