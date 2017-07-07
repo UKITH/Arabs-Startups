@@ -1,14 +1,14 @@
 const { mockCollection } = require('../../database/schema.js');
 
 module.exports = (req, res) => {
-  var options = {};
+  let options = {};
   const filterArray = [
-    req.query.search ? 'search' : 0,
-    req.query.stage ? 'stage' : 0,
-    req.query.sector ? 'sector' : 0
+    req.query.search ? 'search-' : 'null-',
+    req.query.stage ? 'stage-' : 'null-',
+    req.query.sector ? 'sector' : 'null'
   ].join('')
 
-  function findAll(options) {
+  const findAll = options => {
     mockCollection.find(options, (error, startups) => {
       if (error) res.render('not_found')
       else {
@@ -20,7 +20,7 @@ module.exports = (req, res) => {
   }
 
   switch (filterArray) {
-    case 'searchstagesector':
+    case 'search-stage-sector':
        options = {
         startupName: req.query.search,
         startupSector: req.query.sector,
@@ -29,7 +29,7 @@ module.exports = (req, res) => {
       findAll(options);
     break;
 
-    case 'searchstage0':
+    case 'search-stage-null':
        options = {
         startupName: req.query.search,
         fundingStage: req.query.stage
@@ -37,21 +37,21 @@ module.exports = (req, res) => {
       findAll(options);
     break;
 
-    case '00sector':
+    case 'null-null-sector':
        options =  {
         startupSector: req.query.sector,
       }
       findAll(options);
     break;
     // there needs to be validation for the search input in the front end so this would fully work without any bugs
-    case 'search00':
+    case 'search-null-null':
        options = {
         startupName: req.query.search,
       }
       findAll(options);
     break;
 
-    case '0stagesector':
+    case 'null-stage-sector':
        options = {
         fundingStage: req.query.stage,
         startupSector: req.query.sector
@@ -59,7 +59,7 @@ module.exports = (req, res) => {
       findAll(options);
     break;
 
-    case 'search0sector':
+    case 'search-null-sector':
       options = {
         startupName: req.query.search,
         startupSector: req.query.sector
@@ -67,7 +67,7 @@ module.exports = (req, res) => {
       findAll(options);
     break;
 
-    case '0stage0':
+    case 'null-stage-null':
       options = {
         fundingStage: req.query.stage,
       }
