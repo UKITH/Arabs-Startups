@@ -3,9 +3,9 @@ const findAll = require('../find_all.js');
 module.exports = (req, res) => {
   let options = {};
   const filtersArray = [
-    req.query.search ? 'search-' : 'null-',
-    req.query.stage ? 'stage-' : 'null-',
-    req.query.sector ? 'sector' : 'null'
+    req.query.search ? 'search-' : 'noSearch-',
+    req.query.stage ? 'stage-' : 'noStage-',
+    req.query.sector ? 'sector' : 'noSector'
   ].join('')
 
   switch (filtersArray) {
@@ -18,7 +18,7 @@ module.exports = (req, res) => {
       findAll(options, 'search_results', res);
     break;
 
-    case 'search-stage-null':
+    case 'search-stage-noSector':
        options = {
         startupName: req.query.search,
         fundingStage: req.query.stage
@@ -26,21 +26,21 @@ module.exports = (req, res) => {
       findAll(options, 'search_results', res);
     break;
 
-    case 'null-null-sector':
+    case 'noSearch-noStage-sector':
        options =  {
         startupSector: req.query.sector,
       }
       findAll(options, 'search_results', res);
     break;
     // there needs to be validation for the search input in the front end so this would fully work without any bugs
-    case 'search-null-null':
+    case 'search-noStage-noSector':
        options = {
         startupName: req.query.search,
       }
       findAll(options, 'search_results', res);
     break;
 
-    case 'null-stage-sector':
+    case 'noSearch-stage-sector':
        options = {
         fundingStage: req.query.stage,
         startupSector: req.query.sector
@@ -48,7 +48,7 @@ module.exports = (req, res) => {
       findAll(options, 'search_results', res);
     break;
 
-    case 'search-null-sector':
+    case 'search-noStage-sector':
       options = {
         startupName: req.query.search,
         startupSector: req.query.sector
@@ -56,7 +56,7 @@ module.exports = (req, res) => {
       findAll(options, 'search_results', res);
     break;
 
-    case 'null-stage-null':
+    case 'noSearch-stage-noSector':
       options = {
         fundingStage: req.query.stage,
       }
