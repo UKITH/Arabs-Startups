@@ -12,7 +12,7 @@ app.engine('hbs', hbs({
    partialsDir: path.join(__dirname, './', 'views/partials'),
    extname: 'hbs'
 }));
-
+app.use(express.static('public'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
