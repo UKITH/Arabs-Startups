@@ -1,0 +1,48 @@
+<div class="">
+ <div class="">
+    <form class="" action="/search" method="get">
+
+      <fieldset>
+        <input type="text" name="search" placeholder="Search">
+        <input type="submit">
+      </fieldset>
+
+      <fieldset>
+        <label for="funding-stage">Funding Stage: </label>
+        <input type="checkbox" id="funding-stage" name="stage" value="idea-phase" > Idea Phase
+        <input type="checkbox" id="funding-stage" name="stage" value="prototype"> Prototype
+        <input type="checkbox" id="funding-stage" name="stage" value="seed-funded"> Seed Funded
+        <input type="checkbox" id="funding-stage" name="stage" value="round-a"> Round A
+        <input type="checkbox" id="funding-stage" name="stage" value="bootstrap"> Bootstrap
+      </fieldset>
+
+      <fieldset>
+        <label for="StartupSectorInput">Sector: </label>
+        <input type="checkbox" id="StartupSectorInput" value="health" name="sector">Digital Health and Medical Technologies
+        <input type="checkbox" value="it" name="sector">IT
+        <input type="checkbox" value="security" name="sector">Security and Safety
+        <input type="checkbox" value="hardware" name="sector">Hardware
+        <input type="checkbox" value="software" name="sector">Software
+        <input type="checkbox" value="life-science" name="sector">Life Sciences
+        <input type="checkbox" value="eCommerce" name="sector">E-Commerce and Fintech
+        <input type="checkbox" value="education" name="sector">Education and Knowledge Technologies
+        <input type="checkbox" value="cities" name="sector">Smart & Safe Cities/Homes
+        <input type="checkbox" value="other" name="sector">Other
+      </fieldset>
+
+    </form>
+
+  </div>
+
+  <div class="">
+    <h1>Startups</h1>
+
+    {{#each startups}}
+      <div class="">
+        <img src="" alt="">
+        <h3>{{this.startupName}}</h3>
+        <a href="/startupProfile/{{_id}}">CLICK ME</a>
+      </div>
+    {{/each}}
+  </div>
+</div>
