@@ -1,15 +1,17 @@
-<div class="">
-  <div class="">
-    <h2 class="">{{startup.startupName}}</h2>
+<div class="w-60 ml7 absolute vh-75 top-2">
+  <div class="w-100 h3">
+    <h2 class="f1 absolute pt2">{{startup.startupName}}</h2>
+    <span class="f3 fr pt5 mr4"> , {{startup.fundingStage}}</span>
+    <span class="f3 fr pt5">{{startup.startupSector}}</span>
   </div>
-  <div class="">
-    <span class="">{{startup.founderName}}</span>
-    <span class="">{{startup.founderEmail}}</h2>
-    <span class="">{{startup.startupField}}</span>
-    <div class="">
-      <p class="">{{startup.startupDescription}}</p>
-    </div>
-    <span class="">{{startup.startupStage}}</span>
-    <a class="" href={{startup.startupWebsite}}></a>
+  <div class=" w-80 h5 absolute mt5">
+    <img class="h-75 pt4" src="/assets/fac.png" alt="">
+    <p class="gray w-80 f4 h1 dib absolute ml5 mt4">{{startup.startupDescription}}</p>
+  </div>
+  <div class="w-100 h3 bottom-0 h3 mb3 absolute ">
+    <span><a class="gray db f4" href={{startup.startupWebsite}}><img src="/assets/link.png">  {{startup.startupWebsite}}</a></span>
+    <p class="gray db f4"><img src="/assets/mail.png">  {{startup.email}}</p>
+    <br>
+    <span class="gray absolute right-2 top-0 pt2 pr6 f4">Founder: {{startup.founderName}}</span>
   </div>
 </div>
