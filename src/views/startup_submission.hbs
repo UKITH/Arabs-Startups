@@ -11,7 +11,8 @@
       <input type="text" name="founder-name" id="founder-name" class="input-reset bg-silver br2 ba b--black-20 pa2 mb2 db w-100" required>
 
       <label for="select-sector" class="f5 b db white mb2">Sector* </label>
-      <select id="select-sector" name="Select" class="mb2">
+      <select id="select-sector" name="Select" class="mb2 pa2 w-100 bg-silver white br2" required>
+        <option value=""></option>
         <option value="health">Health</option>
         <option value="it">IT</option>
         <option value="security">Security</option>
@@ -26,7 +27,8 @@
 
 
       <label for="funding-stage" class="f5 b db mb2 white">Funding Stage* </label>
-      <select id="funding-stage" name="Select-stage" class="mb2">
+      <select id="funding-stage" name="funding-stage" class="mb2 pa2 w-100 bg-silver white br2" required="">
+        <option value=""></option>
         <option value="Idea-Phase">Idea Phase</option>
         <option value="Prototype">Prototype</option>
         <option value="Seed-Funded">Seed Funded</option>
@@ -39,12 +41,12 @@
     </div><!--
     --><div class="dib pv3 ph5  dimgray b--transparent">
       <label for="description" class="f5 b db mb2 white">Company description (100 words)* </label>
-      <textarea name="description" id="description" class="db border-box hover-black w-100 b--black-20 br2 pa5 br2 mb3 bg-silver"></textarea>
+      <textarea name="description" rows="12" cols="30" id="description" class="db border-box hover-black w-100 br2 br2 mb3 bg-silver"></textarea>
 
       <label for="startup-website" class="f5 b db white">Company's website* </label>
       <input type="text" name="startup-website" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 mb4 mt2 br2" id="startup-website" required>
 
-      <input type="submit" name="submit" class="f6 dim br2 w-100 pv2  mb2 dib white peruOrange" value="Submit">
+      <input type="submit" name="submit" class="f6 br2 w-100 pv2  mb2 dib white peruOrange" value="Submit">
     </div>
   </fieldset>
 

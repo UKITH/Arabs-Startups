@@ -6,6 +6,10 @@
 	text-decoration: none;
 }
 
+textarea {
+	resize: none;
+}
+
 input {
 	border: 0;
 }
