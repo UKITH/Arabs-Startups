@@ -1,4 +1,4 @@
-const findAll = require('../find_all.js');
+const findAllStartups = require('../find_all_startups.js');
 
 module.exports = (req, res) => {
   let options = {};
@@ -15,7 +15,7 @@ module.exports = (req, res) => {
         startupSector: req.query.sector,
         fundingStage: req.query.stage
       }
-      findAll(options, 'search_results', res);
+      findAllStartups(options, 'search_results', res);
     break;
 
     case 'search-stage-noSector':
@@ -23,21 +23,21 @@ module.exports = (req, res) => {
         startupName: req.query.search,
         fundingStage: req.query.stage
       }
-      findAll(options, 'search_results', res);
+      findAllStartups(options, 'search_results', res);
     break;
 
     case 'noSearch-noStage-sector':
        options =  {
         startupSector: req.query.sector,
       }
-      findAll(options, 'search_results', res);
+      findAllStartups(options, 'search_results', res);
     break;
     // there needs to be validation for the search input in the front end so this would fully work without any bugs
     case 'search-noStage-noSector':
        options = {
         startupName: req.query.search,
       }
-      findAll(options, 'search_results', res);
+      findAllStartups(options, 'search_results', res);
     break;
 
     case 'noSearch-stage-sector':
@@ -45,7 +45,7 @@ module.exports = (req, res) => {
         fundingStage: req.query.stage,
         startupSector: req.query.sector
       }
-      findAll(options, 'search_results', res);
+      findAllStartups(options, 'search_results', res);
     break;
 
     case 'search-noStage-sector':
@@ -53,14 +53,14 @@ module.exports = (req, res) => {
         startupName: req.query.search,
         startupSector: req.query.sector
       }
-      findAll(options, 'search_results', res);
+      findAllStartups(options, 'search_results', res);
     break;
 
     case 'noSearch-stage-noSector':
       options = {
         fundingStage: req.query.stage,
       }
-      findAll(options, 'search_results', res);
+      findAllStartups(options, 'search_results', res);
     break;
 
     default: res.render('search_results')
