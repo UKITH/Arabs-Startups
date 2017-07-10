@@ -5,3 +5,23 @@
 	line-height: 1.6rem;
 	text-decoration: none;
 }
+
+fieldset {
+	border: 0px;
+}
+
+input {
+	border: 0;
+}
+
+.dimgray {
+	background-color: #5d5c6b;
+}
+
+.darkSlateGray {
+	background-color: #454559;
+}
+
+.peruOrange {
+	background-color: #c9804f;
+}
