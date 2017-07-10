@@ -1,58 +1,54 @@
 <div class="">
-  <h1>Submit your own startup!</h1>
+  <form class="black-80 mw5 mw8-ns pv5 mv3 darkSlateGray center cf" action="/registerStartup" method="post">
+
+  <fieldset class="b--transparent dimgray mh4 br2">
+    <div class="dib mh0 mh5 dimgray b--transparent pa3">
+      <h1 class="white">Startup Application</h1>
+      <label for="startup-name" class="f5 white b db mb2">Your company's name* </label>
+      <input type="text" name="startup-name" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 br2" id="startup-name" required>
+
+      <label for="founder-name" class="f5 b db white mb2">Your full name* </label>
+      <input type="text" name="founder-name" id="founder-name" class="input-reset bg-silver br2 ba b--black-20 pa2 mb2 db w-100" required>
+
+      <label for="select-sector" class="f5 b db white mb2">Sector* </label>
+      <select id="select-sector" name="Select" class="mb2">
+        <option value="health">Health</option>
+        <option value="it">IT</option>
+        <option value="security">Security</option>
+        <option value="hardware">Hardware</option>
+        <option value="software">Software</option>
+        <option value="lifeScience">Life Sciences</option>
+        <option value="eCommerce">E-Commerce</option>
+        <option value="education">Education</option>
+        <option value="cities">Cities</option>
+        <option value="other">Other</option>
+      </select>
+
+
+      <label for="funding-stage" class="f5 b db mb2 white">Funding Stage* </label>
+      <select id="funding-stage" name="Select-stage" class="mb2">
+        <option value="Idea-Phase">Idea Phase</option>
+        <option value="Prototype">Prototype</option>
+        <option value="Seed-Funded">Seed Funded</option>
+        <option value="Round-A">Round A</option>
+        <option value="Bootstrap">Bootstrap</option>
+      </select>
+
+      <label for="startup-email" class="f5 b db mb2 white">Contact email* </label>
+      <input type="email" name="startup-email" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 br2" id="startup-email" required>
+    </div><!--
+    --><div class="dib pv3 ph5  dimgray b--transparent">
+      <label for="description" class="f5 b db mb2 white">Company description (100 words)* </label>
+      <textarea name="description" id="description" class="db border-box hover-black w-100 b--black-20 br2 pa5 br2 mb3 bg-silver"></textarea>
+
+      <label for="startup-website" class="f5 b db white">Company's website* </label>
+      <input type="text" name="startup-website" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 mb4 mt2 br2" id="startup-website" required>
+
+      <input type="submit" name="submit" class="f6 dim br2 w-100 pv2  mb2 dib white peruOrange" value="Submit">
+    </div>
+  </fieldset>
+
+
+
+  </form>
 </div>
-
-<form class="" action="/registerStartup" method="post">
-
-  <fieldset>
-    <label for="startup-name">Name </label>
-    <input type="text" name="startup-name" id="startup-name" required>
-  </fieldset>
-
-  <fieldset>
-    <label for="founder-name">Founder name </label>
-    <input type="text" name="founder-name" id="founder-name" required>
-  </fieldset>
-
-  <fieldset>
-    <label for="description">Description </label>
-    <input type="text" name="description" id="description" required>
-  </fieldset>
-
-  <fieldset>
-    <label for="select-sector">Sector </label>
-    <select id="select-sector" name="Select">
-      <option value="health">Health</option>
-      <option value="it">IT</option>
-      <option value="security">Security</option>
-      <option value="hardware">Hardware</option>
-      <option value="software">Software</option>
-      <option value="lifeScience">Life Sciences</option>
-      <option value="eCommerce">E-Commerce</option>
-      <option value="education">Education</option>
-      <option value="cities">Cities</option>
-      <option value="other">Other</option>
-    </select>
-  </fieldset>
-
-  <fieldset>
-    <label for="funding-stage">Funding Stage </label>
-    <input type="text" name="funding-stage" id="funding-stage" required>
-  </fieldset>
-
-
-  <fieldset>
-    <label for="startup-email">Email </label>
-    <input type="email" name="startup-email" id="startup-email" required>
-  </fieldset>
-
-
-  <fieldset>
-    <label for="startup-website">Website </label>
-    <input type="text" name="startup-website" id="startup-website" required>
-  </fieldset>
-
-
-  <input type="submit" name="submit" value="Submit">
-
-</form>
