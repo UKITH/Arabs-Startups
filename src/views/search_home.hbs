@@ -1,29 +1,45 @@
-<div class="searchContainer">
-  <h1>Arab innovators</h1>
-  <p>The home of Arab-led startups in Israel.</p>
+<div class="bg-near-white vh-100 w-100 pl7 pr6">
+  <div class="bg-granite-gray h5 mt5 w-90">
+    <h1 class="near-white f2 ma1  pv4 ph4">Arab innovators</h1>
+    <p class="near-white f3 ma2 ph4">The home of Arab-led startups in Israel.</p>
 
-  <form class="" action="/search" method="get">
+    <form class="" action="/search" method="get">
 
-    <fieldset>
-      <label for="search-input"></label>
-      <input type="text" name="search" id="search-input">
+      <fieldset class="b--transparent ma4">
+        <label for="search-input"></label>
+        <input class="bg-gray ph3 mh0 ba b--near-white fw6 white-80 input-reset" type="text" name="search" id="search-input" value="search startups"><!--
+      --><select class="bg-gray ph3 mh0 ba b--near-white fw7 white-80 overflow-hidden" id="select-sector" name="Select">
+          <option  value="none">Any Sector</option>
+          <option value="health">Health</option>
+          <option value="it">IT</option>
+          <option value="security">Security</option>
+          <option value="hardware">Hardware</option>
+          <option value="software">Software</option>
+          <option value="lifeScience">Life Sciences</option>
+          <option value="eCommerce">E-Commerce</option>
+          <option value="education">Education</option>
+          <option value="cities">Cities</option>
+          <option value="other">Other</option>
+        </select>
 
-      <select id="select-sector" name="Select">
-        <option value="none">Any Sector</option>
-        <option value="health">Health</option>
-        <option value="it">IT</option>
-        <option value="security">Security</option>
-        <option value="hardware">Hardware</option>
-        <option value="software">Software</option>
-        <option value="lifeScience">Life Sciences</option>
-        <option value="eCommerce">E-Commerce</option>
-        <option value="education">Education</option>
-        <option value="cities">Cities</option>
-        <option value="other">Other</option>
-      </select>
-
-      <input type="submit">
-    </fieldset>
-
-  </form>
+        <input class="bg-orange ph2 pv2 near-white br1 b--none f6 b tc" type="submit" value="search">
+      </fieldset>
+    </form>
+    <div class="v-top w-100 pv4">
+      <img class="fl w-50 w-25-l overflow-hidden" src="/assets/home1.jpg" alt="">
+      <img class="fl w-50 w-25-l overflow-hidden" src="/assets/home2.jpg" alt="">
+      <img class="fl w-50 w-25-l overflow-hidden" src="/assets/home5.png" alt="">
+      <img class="fl w-50 w-25-l overflow-hidden" src="/assets/home4.jpg" alt="">
+    </div>
+    <div class="bg-near-white h5 pt5 mt5 w-100 ma4">
+      <h1 class="text-orange f2 mb3">Who Are We ?</h1>
+      <span class="text-granite-gray db">We connect Investors with pioneering Enterprenurs.</span>
+      <span class="text-granite-gray">We believe that diversity is key to innovation.</span>
+    </div>
+    <div class="bg-granite-gray h5 mt5 w-100">
+      <h1 class="text-orange f2 ma1 pv3 ph4">Why Are We ?</h1>
+      <p class="near-white ma4 db">Israel is a startup nation. But its Arab community is severely under-represented in high tech. This is due to lack of dunding and visibility, as well as cultural stereoptypes.</p>
+      <span class="near-white ma4">Fortunately, times are changing. There's a lot of talent to encourage out there.</span>
+    </div>
+  </div>
 </div>
