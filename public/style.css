@@ -1,9 +1,20 @@
 
-
-* {
+/** {
 	word-spacing: 0.3rem;
 	line-height: 1.6rem;
 	text-decoration: none;
+}*/
+
+.bg-our-orange {
+  background-color: #FF5C38;
+}
+
+.bg-dark-purple {
+  background-color:  #45435b;
+}
+
+.bg-granite-gray {
+  background-color: #5d5b6d;
 }
 
 textarea {
