@@ -1,48 +1,76 @@
-<div class="">
- <div class="">
-    <form class="" action="/search" method="get">
+<div class="cf">
+  <div class="dib fl mv5 w-30 ">
+    <form class="bn lf w-100" action="/search" method="get">
 
-      <fieldset>
-        <input type="text" name="search" placeholder="Search">
-        <input type="submit">
+        <input type="text" name="search" placeholder="Search" class="br2 ba b--black bg-near-gray pa2 mh3">
+
+      <label for="StartupSectorInput" class="db f3 ma3" id="sector-label">Sector </label>
+      <fieldset class="bn w-100" id="sector-fieldset">
+        <input type="radio" class="w-10 h1 dib" id="StartupSectorInput" value="health" name="sector"> <label for="">Digital Health and Medical Technologies</label>
+        <label for="" class="db">
+          <input type="radio" value="it" class="dib h1 w-10" name="sector" id="it"> IT
+        </label>
+        <label for="" class="db">
+          <input type="radio" value="security" class="dib h1 w-10" name="sector"> Security and Safety
+        </label>
+        <label for="" class="db">
+          <input type="radio" value="hardware" name="sector" class="dib h1 w-10"> Hardware
+        </label>
+        <label for="" class="db">
+          <input type="radio" value="software" name="sector" class="dib h1 w-10"> Software
+        </label>
+        <label for="" class="db">
+          <input type="radio" value="life-science" name="sector" class="dib h1 w-10"> Life Sciences
+        </label>
+        <label for="" class="db">
+          <input type="radio" value="eCommerce" name="sector" class="dib h1 w-10"> E-Commerce and Fintech
+        </label>
+        <label for="" class="db">
+          <input type="radio" value="education" name="sector" class="dib h1 w-10"> Education and Knowledge Technologies
+        </label>
+        <label for="" class="db">
+          <input type="radio" value="cities" name="sector" class="dib w-10 h1"> Smart & Safe Cities/Homes
+        </label>
+        <label for="" class="db">
+          <input type="radio" value="other" name="sector" class="dib w-10 h1"> Other
+        </label>
       </fieldset>
 
-      <fieldset>
-        <label for="funding-stage">Funding Stage: </label>
-        <input type="checkbox" id="funding-stage" name="stage" value="idea-phase" > Idea Phase
-        <input type="checkbox" id="funding-stage" name="stage" value="prototype"> Prototype
-        <input type="checkbox" id="funding-stage" name="stage" value="seed-funded"> Seed Funded
-        <input type="checkbox" id="funding-stage" name="stage" value="round-a"> Round A
-        <input type="checkbox" id="funding-stage" name="stage" value="bootstrap"> Bootstrap
-      </fieldset>
-
-      <fieldset>
-        <label for="StartupSectorInput">Sector: </label>
-        <input type="checkbox" id="StartupSectorInput" value="health" name="sector">Digital Health and Medical Technologies
-        <input type="checkbox" value="it" name="sector">IT
-        <input type="checkbox" value="security" name="sector">Security and Safety
-        <input type="checkbox" value="hardware" name="sector">Hardware
-        <input type="checkbox" value="software" name="sector">Software
-        <input type="checkbox" value="life-science" name="sector">Life Sciences
-        <input type="checkbox" value="eCommerce" name="sector">E-Commerce and Fintech
-        <input type="checkbox" value="education" name="sector">Education and Knowledge Technologies
-        <input type="checkbox" value="cities" name="sector">Smart & Safe Cities/Homes
-        <input type="checkbox" value="other" name="sector">Other
+      <label for="funding-stage" class="db f3 ma3" id="funding-label">Funding Stage </label>
+      <fieldset class="bn w-100" id="funding-fieldset">
+        <input type="radio" id="funding-stage" name="stage" value="idea-phase" class="dib w-10 h1"> Idea Phase
+        <label for="" class="db">
+          <input type="radio" id="funding-stage" name="stage" value="prototype" class="dib w-10 h1"> Prototype
+        </label>
+        <label for="" class="db">
+          <input type="radio" id="funding-stage" name="stage" value="seed-funded" class="dib w-10 h1"> Seed Funded
+        </label>
+        <label for="" class="db">
+          <input type="radio" id="funding-stage" name="stage" value="round-a" class="dib w-10 h1"> Round A
+        </label>
+        <label for="" class="db">
+          <input type="radio" id="funding-stage" name="stage" value="bootstrap" class="dib w-10 h1"> Bootstrap
+        </label>
       </fieldset>
 
     </form>
-
   </div>
-
-  <div class="">
-    <h1>Startups</h1>
+  <div class="fl w-69 mv5 ml3">
+    <h1 class="f1 fw3">Startups</h1>
 
     {{#each startups}}
-      <div class="">
-        <img src="" alt="">
-        <h3>{{this.startupName}}</h3>
-        <a href="/startupProfile/{{_id}}">CLICK ME</a>
-      </div>
+    <div class="dib mh1 tc">
+      <a href="/startupProfile/{{_id}}" ><img src="/assets/fac.png" alt="" class="h4 w4 ba br2 pa5"></a>
+      <h3 class="">{{this.startupName}}</h3>
+    </div>
+    <div class="dib mh1 tc">
+      <a href="/startupProfile/{{_id}}" ><img src="/assets/fac.png" alt="" class="h4 w4 ba br2 pa5"></a>
+      <h3 class="">{{this.startupName}}</h3>
+    </div>
+    <div class="dib mh1 tc">
+      <a href="/startupProfile/{{_id}}" ><img src="/assets/fac.png" alt="" class="h4 w4 ba br2 pa5"></a>
+      <h3 class="">{{this.startupName}}</h3>
+    </div>
     {{/each}}
   </div>
 </div>
