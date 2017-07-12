@@ -24,3 +24,11 @@
 .text-granite-gray {
 	color: #5d5b6d;
 }
+
+textarea {
+	resize: none;
+}
+
+input {
+	border: 0;
+}

@@ -5,6 +5,7 @@ module.exports = (req, res) => {
   let startup = new mockCollection({
     startupName: req.body['startup-name'],
     founderName: req.body['founder-name'],
+    coFounderName: req.body['coFounder-name'],
     startupDescription: req.body['description'],
     startupSector: req.body.Select,
     fundingStage: req.body['Select-stage'],
