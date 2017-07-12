@@ -3,7 +3,7 @@ A web application to make Arabs startups more accessible for Investors and to en
 
 Collaboration between Founders & Coders and the British Embassy in Israel
 
-https://arab-startups.herokuapp.com/
+https://arabinnovators.herokuapp.com/
 
 [![Build Status](https://travis-ci.org/UKITH/Arabs-Startups.svg?branch=master)](https://travis-ci.org/UKITH/Arabs-Startups)
 [![codecov](https://codecov.io/gh/UKITH/Arabs-Startups/branch/master/graph/badge.svg)](https://codecov.io/gh/UKITH/Arabs-Startups)
