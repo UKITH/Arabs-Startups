@@ -1,54 +1,59 @@
 <div class="cf">
-  <div class="dib fl mv5 w-30 ">
+  <div class="dib fl mv5 w-30 mh4">
     <form class="bn lf w-100" action="/search" method="get">
 
-        <input type="text" name="search" placeholder="Search" class="br2 ba b--black bg-near-gray pa2 mh3">
+        <input type="text" name="search" placeholder="my search" class="br2 ba b--black bg-near-gray pa2 mh3">
 
-      <label for="StartupSectorInput" class="db f3 ma3" id="sector-label">Sector </label>
+      <label for="StartupSectorInput" class="db f3 ma3 text-granite-gray" id="sector-label"> Sector </label>
       <fieldset class="bn w-100" id="sector-fieldset">
-        <input type="radio" class="w-10 h1 dib" id="StartupSectorInput" value="health" name="sector"> <label for="">Digital Health and Medical Technologies</label>
-        <label for="" class="db">
+        <label for="" class="db gray">
+          <input type="radio" class="w-10 h1 dib" value="health" name="sector"> <label for="">Digital Health and Medical Technologies</label>
+        </label>
+        <label for="" class="db gray">
           <input type="radio" value="it" class="dib h1 w-10" name="sector" id="it"> IT
         </label>
-        <label for="" class="db">
+        <label for="" class="db gray">
           <input type="radio" value="security" class="dib h1 w-10" name="sector"> Security and Safety
         </label>
-        <label for="" class="db">
+        <label for="" class="db gray">
           <input type="radio" value="hardware" name="sector" class="dib h1 w-10"> Hardware
         </label>
-        <label for="" class="db">
+        <label for="" class="db gray">
           <input type="radio" value="software" name="sector" class="dib h1 w-10"> Software
         </label>
-        <label for="" class="db">
+        <label for="" class="db gray">
           <input type="radio" value="life-science" name="sector" class="dib h1 w-10"> Life Sciences
         </label>
-        <label for="" class="db">
+        <label for="" class="db gray">
           <input type="radio" value="eCommerce" name="sector" class="dib h1 w-10"> E-Commerce and Fintech
         </label>
-        <label for="" class="db">
+        <label for="" class="db gray">
           <input type="radio" value="education" name="sector" class="dib h1 w-10"> Education and Knowledge Technologies
         </label>
-        <label for="" class="db">
+        <label for="" class="db gray">
           <input type="radio" value="cities" name="sector" class="dib w-10 h1"> Smart & Safe Cities/Homes
         </label>
-        <label for="" class="db">
+        <label for="" class="db gray">
           <input type="radio" value="other" name="sector" class="dib w-10 h1"> Other
         </label>
       </fieldset>
 
-      <label for="funding-stage" class="db f3 ma3" id="funding-label">Funding Stage </label>
-      <fieldset class="bn w-100" id="funding-fieldset">
+      <label for="funding-stage" class="db f3 ma3 text-granite-gray" id="funding-label">Funding Stage </label>
+
+      <fieldset class="bn w-100 tracked" id="funding-fieldset">
+        <label for="" class="db gray">
         <input type="radio" id="funding-stage" name="stage" value="idea-phase" class="dib w-10 h1"> Idea Phase
-        <label for="" class="db">
+        </label>
+        <label for="" class="db gray">
           <input type="radio" id="funding-stage" name="stage" value="prototype" class="dib w-10 h1"> Prototype
         </label>
-        <label for="" class="db">
+        <label for="" class="db gray">
           <input type="radio" id="funding-stage" name="stage" value="seed-funded" class="dib w-10 h1"> Seed Funded
         </label>
-        <label for="" class="db">
+        <label for="" class="db gray">
           <input type="radio" id="funding-stage" name="stage" value="round-a" class="dib w-10 h1"> Round A
         </label>
-        <label for="" class="db">
+        <label for="" class="db gray">
           <input type="radio" id="funding-stage" name="stage" value="bootstrap" class="dib w-10 h1"> Bootstrap
         </label>
       </fieldset>
@@ -56,20 +61,12 @@
     </form>
   </div>
   <div class="fl w-69 mv5 ml3">
-    <h1 class="f1 fw3">Startups</h1>
+    <h1 class="f1 fw3 text-granite-gray">Startups</h1>
 
     {{#each startups}}
     <div class="dib mh1 tc">
       <a href="/startupProfile/{{_id}}" ><img src="/assets/fac.png" alt="" class="h4 w4 ba br2 pa5"></a>
-      <h3 class="">{{this.startupName}}</h3>
-    </div>
-    <div class="dib mh1 tc">
-      <a href="/startupProfile/{{_id}}" ><img src="/assets/fac.png" alt="" class="h4 w4 ba br2 pa5"></a>
-      <h3 class="">{{this.startupName}}</h3>
-    </div>
-    <div class="dib mh1 tc">
-      <a href="/startupProfile/{{_id}}" ><img src="/assets/fac.png" alt="" class="h4 w4 ba br2 pa5"></a>
-      <h3 class="">{{this.startupName}}</h3>
+      <h3 class="text-granite-gray">{{this.startupName}}</h3>
     </div>
     {{/each}}
   </div>
