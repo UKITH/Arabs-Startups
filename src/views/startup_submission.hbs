@@ -4,14 +4,14 @@
   <fieldset class="b--transparent dimgray mh4 br2">
     <div class="dib mh0 mh5 dimgray b--transparent pa3">
       <h1 class="white">Startup Application</h1>
-      <label for="startup-name" class="f5 white b db mb2">Your company's name* </label>
-      <input type="text" name="startup-name" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 br2" id="startup-name" required>
-
       <label for="founder-name" class="f5 b db white mb2">Your full name* </label>
       <input type="text" name="founder-name" id="founder-name" class="input-reset bg-silver br2 ba b--black-20 pa2 mb2 db w-100" required>
 
       <label for="coFounder-name" class="f5 white b db mb2 pv2">  <img src="/assets/plus.png" alt="" id="plus-circle"> Co-Founder name* </label>
       <input type="text" name="coFounder-name" class="input-reset bg-silver ba b--black-20 pa2 mb2 dn w-100 br2" id="coFounder-name" required>
+
+      <label for="startup-name" class="f5 white b db mb2">Your company's name* </label>
+      <input type="text" name="startup-name" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 br2" id="startup-name" required>
 
       <label for="select-sector" class="f5 b db white mb2">Sector* </label>
       <select id="select-sector" name="Select" class="mb2 pa2 w-100 bg-silver white br2" required>
@@ -28,6 +28,16 @@
         <option value="other">Other</option>
       </select>
 
+      <label for="startup-website" class="f5 b db white">Company's website* </label>
+      <input type="text" name="startup-website" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 mt2 br2" id="startup-website" required>
+
+      <label for="startup-email" class="f5 b db mb2 white">Contact email* </label>
+      <input type="email" name="startup-email" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 br2" id="startup-email" required>
+
+    </div><!--
+    --><div class="dib pv3 ph5  dimgray b--transparent">
+      <label for="description" class="f5 b db mb2 white">Company description (100 words)* </label>
+      <textarea name="description" rows="12" cols="30" id="description" class="db border-box hover-black w-100 br2 br2 mb3 bg-silver"></textarea>
 
       <label for="funding-stage" class="f5 b db mb2 white">Funding Stage* </label>
       <select id="funding-stage" name="funding-stage" class="mb2 pa2 w-100 bg-silver white br2" required="">
@@ -38,16 +48,6 @@
         <option value="Round-A">Round A</option>
         <option value="Bootstrap">Bootstrap</option>
       </select>
-
-      <label for="startup-email" class="f5 b db mb2 white">Contact email* </label>
-      <input type="email" name="startup-email" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 br2" id="startup-email" required>
-    </div><!--
-    --><div class="dib pv3 ph5  dimgray b--transparent">
-      <label for="description" class="f5 b db mb2 white">Company description (100 words)* </label>
-      <textarea name="description" rows="12" cols="30" id="description" class="db border-box hover-black w-100 br2 br2 mb3 bg-silver"></textarea>
-
-      <label for="startup-website" class="f5 b db white">Company's website* </label>
-      <input type="text" name="startup-website" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 mb4 mt2 br2" id="startup-website" required>
 
       <input type="submit" name="submit" class="f6 br2 w-100 pv2  mb2 dib white peruOrange" value="Submit">
     </div>
