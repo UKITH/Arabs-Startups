@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const startupSchema = mongoose.Schema({
   founderName: {type: String, required: true},
+  coFounderName: {type: String},
   startupName: {type: String, required: true, unique: true},
   startupDescription: {type: String, required:true},
   startupSector: {type: String, required: true},
