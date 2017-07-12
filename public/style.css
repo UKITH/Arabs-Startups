@@ -17,6 +17,14 @@
   background-color: #5d5b6d;
 }
 
+.text-orange {
+	color: #FF5C38;
+}
+
+.text-granite-gray {
+	color: #5d5b6d;
+}
+
 textarea {
 	resize: none;
 }
