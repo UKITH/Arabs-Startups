@@ -8,7 +8,7 @@ module.exports = (req, res) => {
     coFounderName: req.body['coFounder-name'],
     startupDescription: req.body['description'],
     startupSector: req.body.Select,
-    fundingStage: req.body['Select-stage'],
+    fundingStage: req.body['funding-stage'],
     email: req.body['startup-email'],
     startupWebsite: req.body['startup-website']
   });
