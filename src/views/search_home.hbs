@@ -1,14 +1,16 @@
-<div class="vh-100 w-100 pl7 pv4 pr6">
-  <div class="bg-granite-gray h5 mt5 w-90">
-    <h1 class="near-white f2 ma1  pv4 ph4">Arab innovators</h1>
-    <p class="near-white f3 ma2 ph4">The home of Arab-led startups in Israel.</p>
+{{> nav-bar}}
+
+<div class="tc">
+  <div class="bg-granite-gray tc center w-80">
+    <h1 class="near-white mv0 f1">Arab innovators</h1>
+    <p class="near-white f2">The home of Arab-led startups in Israel.</p>
 
     <form class="" action="/search" method="get">
 
-      <fieldset class="b--transparent mh4 mv3">
+      <fieldset class="b--transparent">
         <label for="search-input"></label>
-        <input class="bg-gray w-40 ph1 pv2 mh0 ba b--near-white fw6 white input-reset" type="text" name="search" id="search-input" placeholder="search startups"><!--
-      --><select class="bg-gray ph2 pv2 mh0 ba b--near-white b white-40         overflow-hidden" id="select-sector" name="sector" >
+        <input class="bg-gray ba b--near-white ph4 h2 white input-reset" type="text" name="search" id="search-input" placeholder="search startups"><!--
+      --><select class="bg-gray ba b--near-white h2 ph3 b white-40         overflow-hidden" id="select-sector" name="sector" >
           <option value="">any sector</option>
           <option value="health">Health</option>
           <option value="it">IT</option>
@@ -21,28 +23,86 @@
           <option value="cities">Cities</option>
           <option value="other">Other</option>
         </select><!--
-      --><input class="bg-orange ph3 pv2 near-white br1 bn b" type="submit" value="search">
+      --><input class="bg-orange near-white br1 bn b h2" type="submit" value="search">
       </fieldset>
     </form>
-    <div class="v-top w-100">
-      <img class="fl w-50 w-25-l overflow-hidden" src="/assets/home1.jpg" alt="">
-      <img class="fl w-50 w-25-l overflow-hidden" src="/assets/home2.jpg" alt="">
-      <img class="fl w-50 w-25-l overflow-hidden" src="/assets/home5.png" alt="">
-      <img class="fl w-50 w-25-l overflow-hidden" src="/assets/home4.jpg" alt="">
+  </div>
+
+    <div class="tc">
+      <img class="w-20 overflow-hidden" src="/assets/home1.jpg" alt=""><!--
+      --><img class="w-20 overflow-hidden" src="/assets/home2.jpg" alt=""><!--  --><img class="w-20 overflow-hidden" src="/assets/home5.png" alt=""><!--  --><img class="w-20 overflow-hidden" src="/assets/home4.jpg" alt="">
     </div>
-    <div class="w-100 dib mh4 mv3">
-      <h1 class="text-orange f2 mb3">Who Are We ?</h1>
-      <span class="text-granite-gray db lh-copy">We connect Investors with pioneering Enterprenurs.</span>
-      <span class="text-granite-gray lh-copy">We believe that diversity is key to innovation.</span>
+
+    <div class="">
+      <h1 class="text-orange f2">Who Are We ?</h1>
+      <span class="text-granite-gray lh-copy">We connect Investors with pioneering Enterprenurs. We believe that diversity is key to innovation. </span>
     </div>
-      <div class="bg-granite-gray h-75 mv5 w-100">
-        <h1 class="text-orange f2 ma1 pt3 ph4">Why Are We ?</h1>
-        <p class="near-white mh4 db lh-copy">Israel is a startup nation. But its Arab community is severely under-represented in high tech. This is due to lack of dunding and visibility, as well as cultural stereoptypes.
-          <br>Fortunately, times are changing. There's a lot of talent to encourage out there.</p>
+
+      <div class="bg-granite-gray w-80 center pb1">
+        <h1 class="text-orange f2 pv1">Why Are We ?</h1>
+        <p class="near-white lh-copy">Israel is a startup nation. But its Arab community is severely under-represented in high tech. This is due to lack of dunding and visibility, as well as cultural stereoptypes.
+        Fortunately, times are changing. There's a lot of talent to encourage out there.</p>
       </div>
 
-      <div class="dib tc w-100 mb5 f3">
+      <!-- <div class="f3">
         If you run a startup, you can <a href="/submissionForm" class="text-orange f3">apply to join</a>
+      </div> -->
+
+      <div class=" w-80 center">
+        <form class="black-80 w-100 pv4 mt3 bg-dark-purple" action="/registerStartup" method="post">
+
+        <fieldset class="b--transparent center bg-granite-gray mh4 br2 w-100">
+          <div class="dib bg-granite-gray b--transparent pa3">
+            <h1 class="white">Startup Application</h1>
+            <label for="founder-name" class="f5 b db white mb2">Your full name* </label>
+            <input type="text" name="founder-name" id="founder-name" class="input-reset bg-silver br2 ba b--black-20 pa2 mb2 db w-100" required>
+
+            <label for="coFounder-name" class="f5 white b db mb2 pv2">  <img src="/assets/plus.png" alt="" id="plus-circle"> Co-Founder name </label>
+            <input type="text" name="coFounder-name" class="input-reset bg-silver ba b--black-20 pa2 mb2 dn w-100 br2" id="coFounder-name">
+
+            <label for="startup-name" class="f5 white b db mb2">Your startup's name* </label>
+            <input type="text" name="startup-name" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 br2" id="startup-name" required>
+
+            <label for="select-sector" class="f5 b db white mb2">Sector* </label>
+            <select id="select-sector" name="Select" class="mb2 pa2 w-100 bg-silver white br2 bn" required>
+              <option value=""></option>
+              <option value="Health">Health</option>
+              <option value="IT">IT</option>
+              <option value="Security">Security</option>
+              <option value="Hardware">Hardware</option>
+              <option value="Software">Software</option>
+              <option value="Life Science">Life Sciences</option>
+              <option value="E-Commerce">E-Commerce</option>
+              <option value="Education">Education</option>
+              <option value="Cities">Cities</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <label for="startup-website" class="f5 b db white">Startup website* </label>
+            <input type="text" name="startup-website" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 mt2 br2" id="startup-website" required>
+
+            <label for="startup-email" class="f5 b db mb2 white">Contact email* </label>
+            <input type="email" name="startup-email" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 br2" id="startup-email" required>
+
+          </div><!--
+          --><div class="dib ph5  bg-granite-gray b--transparent">
+            <label for="description" class="f5 b db mb2 white">Startup description (up tp 100 words)* </label>
+            <textarea name="description" rows="12" cols="30" id="description" class="db border-box hover-black w-100 br2 br2 mb4 bg-silver bn"></textarea>
+
+            <label for="funding-stage" class="f5 b db mb2 white">Funding Stage* </label>
+            <select id="funding-stage" name="funding-stage" class="mb4 pa2 w-100 bg-silver white br2 bn" required="">
+              <option value=""></option>
+              <option value="Idea-Phase">Idea Phase</option>
+              <option value="Prototype">Prototype</option>
+              <option value="Seed-Funded">Seed Funded</option>
+              <option value="Round-A">Round A</option>
+              <option value="Bootstrap">Bootstrap</option>
+            </select>
+
+            <input type="submit" name="submit" class="f6 br2 w-100 pv2  mb2 dib white bg-our-orange" value="Submit">
+          </div>
+        </fieldset>
+        </form>
       </div>
-  </div>
+      <script type="text/javascript" src="/form.js"></script>
 </div>
