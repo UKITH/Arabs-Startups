@@ -63,6 +63,10 @@ module.exports = (req, res) => {
       findAllStartups(options, 'search_results', res);
     break;
 
+    case 'noSearch-noStage-noSector':
+      findAllStartups({}, 'search_results', res)
+    break;
+
     default: res.render('search_results')
   }
 }
