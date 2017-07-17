@@ -44,20 +44,33 @@
       Fortunately, times are changing. There's a lot of talent to encourage out there.</p>
     </div>
 
-    <div class=" w-80 center">
+    <!-- Submission form -->
+
+    <div class=" w-80 center" id="submissionView">
       <form class="black-80 w-100 pv4 mt3 bg-dark-purple" action="/registerStartup" method="post">
 
       <fieldset class="b--transparent center bg-granite-gray mh4 br2 w-100">
         <div class="dib bg-granite-gray b--transparent pa3">
           <h1 class="white">Startup Application</h1>
-          <label for="founder-name" class="f5 b db white mb2">Your full name* </label>
-          <input type="text" name="founder-name" id="founder-name" class="input-reset bg-silver br2 ba b--black-20 pa2 mb2 db w-100" required>
+          <label for="founder-name" class="f5 b db white mt2">Your full name* </label>
+          <input type="text" name="founder-name" id="founder-name" class="input-reset bg-silver br2 ba b--black-20 pa2 mt2 db w-100" required>
 
-          <label for="coFounder-name" class="f5 white b db mb2 pv2">  <img src="/assets/plus.png" alt="" id="plus-circle"> Co-Founder name </label>
+          <label for="coFounder-name" class="f5 white b db mv3 pv2">  <img src="/assets/plus.png" alt="" id="plus-circle"> Co-Founder name </label>
           <input type="text" name="coFounder-name" class="input-reset bg-silver ba b--black-20 pa2 mb2 dn w-100 br2" id="coFounder-name">
 
           <label for="startup-name" class="f5 white b db mb2">Your startup's name* </label>
           <input type="text" name="startup-name" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 br2" id="startup-name" required>
+
+          <label for="startup-website" class="f5 b db white">Startup website* </label>
+          <input type="text" name="startup-website" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 mt2 br2" id="startup-website" required>
+
+          <label for="startup-email" class="f5 b db mb2 white">Contact email* </label>
+          <input type="email" name="startup-email" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 br2" id="startup-email" required>
+
+        </div><!--
+        --><div class="dib ph5  bg-granite-gray b--transparent">
+          <label for="description" class="f5 b db mb2 white">Startup description (up tp 100 words)* </label>
+          <textarea name="description" rows="12" cols="30" id="description" class="db border-box hover-black w-100 br2 br2 mb2 bg-silver bn"></textarea>
 
           <label for="select-sector" class="f5 b db white mb2">Sector* </label>
           <select id="select-sector" name="Select" class="mb2 pa2 w-100 bg-silver white br2 bn" required>
@@ -74,19 +87,8 @@
             <option value="Other">Other</option>
           </select>
 
-          <label for="startup-website" class="f5 b db white">Startup website* </label>
-          <input type="text" name="startup-website" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 mt2 br2" id="startup-website" required>
-
-          <label for="startup-email" class="f5 b db mb2 white">Contact email* </label>
-          <input type="email" name="startup-email" class="input-reset bg-silver ba b--black-20 pa2 mb2 db w-100 br2" id="startup-email" required>
-
-        </div><!--
-        --><div class="dib ph5  bg-granite-gray b--transparent">
-          <label for="description" class="f5 b db mb2 white">Startup description (up tp 100 words)* </label>
-          <textarea name="description" rows="12" cols="30" id="description" class="db border-box hover-black w-100 br2 br2 mb4 bg-silver bn"></textarea>
-
           <label for="funding-stage" class="f5 b db mb2 white">Funding Stage* </label>
-          <select id="funding-stage" name="funding-stage" class="mb4 pa2 w-100 bg-silver white br2 bn" required="">
+          <select id="funding-stage" name="funding-stage" class="mb2 pa2 w-100 bg-silver white br2 bn" required="">
             <option value=""></option>
             <option value="Idea-Phase">Idea Phase</option>
             <option value="Prototype">Prototype</option>
@@ -95,7 +97,7 @@
             <option value="Bootstrap">Bootstrap</option>
           </select>
 
-          <input type="submit" name="submit" class="f6 br2 w-100 pv2  mb2 dib white bg-our-orange" value="Submit">
+          <input type="submit" name="submit" class="f6 br2 w-100 pv2 mb2 dib white bg-our-orange" value="Submit">
         </div>
       </fieldset>
       </form>
