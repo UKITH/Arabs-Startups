@@ -1,42 +1,24 @@
 {{>navbar}}
 <div class="cf">
-  <div class="dib fl mv4 w-30 mh4">
+  <div class="dib fl mv4 w-30 pb7 mh4">
     <form class="bn lf w-100" action="/search" method="get">
         <input type="text" name="search" placeholder="my search" class="br2 ba b--black bg-near-gray pa2 ml3">
         <input type="submit" name="Submit" class="pa2 ph3 mr4 br2 ba bg-white">
 
-      <label for="StartupSectorInput" class="db f3 ma3 text-granite-gray" id="sector-label"> Sector </label>
       <fieldset class="bn w-100" id="sector-fieldset">
-        <label for="" class="db gray">
-          <input type="checkbox" class="w-10 h1 dib" value="health" name="sector"> <label for="">Digital Health and Medical Technologies</label>
-        </label>
-        <label for="" class="db gray">
-          <input type="checkbox" value="it" class="dib h1 w-10" name="sector" id="it"> IT
-        </label>
-        <label for="" class="db gray">
-          <input type="checkbox" value="security" class="dib h1 w-10" name="sector"> Security and Safety
-        </label>
-        <label for="" class="db gray">
-          <input type="checkbox" value="hardware" name="sector" class="dib h1 w-10"> Hardware
-        </label>
-        <label for="" class="db gray">
-          <input type="checkbox" value="software" name="sector" class="dib h1 w-10"> Software
-        </label>
-        <label for="" class="db gray">
-          <input type="checkbox" value="life-science" name="sector" class="dib h1 w-10"> Life Sciences
-        </label>
-        <label for="" class="db gray">
-          <input type="checkbox" value="eCommerce" name="sector" class="dib h1 w-10"> E-Commerce and Fintech
-        </label>
-        <label for="" class="db gray">
-          <input type="checkbox" value="education" name="sector" class="dib h1 w-10"> Education and Knowledge Technologies
-        </label>
-        <label for="" class="db gray">
-          <input type="checkbox" value="cities" name="sector" class="dib w-10 h1"> Smart & Safe Cities/Homes
-        </label>
-        <label for="" class="db gray">
-          <input type="checkbox" value="other" name="sector" class="dib w-10 h1"> Other
-        </label>
+
+        <select class="bg-white ph4 br2 bn pv1" name="Sector"  id="sector-select" required>
+          <option value="Health">Health</option>
+          <option value="IT">IT</option>
+          <option value="Security">Security</option>
+          <option value="Hardware">Hardware</option>
+          <option value="Software">Software</option>
+          <option value="Life Science">Life Science</option>
+          <option value="E-Commerce">E-Commerce</option>
+          <option value="Education">Education</option>
+          <option value="Cities">Cities</option>
+          <option value="Other">Other</option>
+        </select>
       </fieldset>
 
       <label for="funding-stage" class="db f3 ma3 text-granite-gray" id="funding-label">Funding Stage </label>
@@ -61,7 +43,7 @@
 
     </form>
   </div>
-  <div class="fl w-69 mv5 ml3">
+  <div class="w-69 mv5 ml3">
     <h1 class="f1 fw3 text-granite-gray">Startups</h1>
 
     {{#each startups}}
