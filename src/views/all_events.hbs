@@ -1,0 +1,32 @@
+<div class="">
+  <h1>Upcoming Events</h1>
+  {{#each upcomingEvents}}
+  <span>{{this.date}}</span>
+  <div class="">
+    {{this.time}}
+  </div>
+  <div class="">
+    {{this.title}}
+    {{this.location}}
+  </div>
+  <div class="">
+    <a href="{{this.rsvp}}">RSVP</a>
+  </div>
+  {{/each}}
+
+  <h2>Past Events</h2>
+  {{#each events}}
+  <span>{{this.date}}</span>
+  <div class="">
+    {{this.time}}
+  </div>
+  <div class="">
+    {{this.title}}
+    {{this.location}}
+  </div>
+  {{/each}}
+  </div>
+
+
+
+</div>
