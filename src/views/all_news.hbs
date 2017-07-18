@@ -1,17 +1,17 @@
-{{> navbar}}
-
 <div >
   <h1>Tech & Startup News</h1>
   <div>
     <div>
       <a href="/news/{{_id}}"><img src="/assets/fac.png"></a>
-      <h2>{{this.SingleNews.title}}</h3>
+      <a href="/news/{{_id}}">{{this.SingleNews.title}}</a>
+      <p>{{this.news.subHead}}</p>
+      <a href="/news/{{_id}}">Read More</a>
     </div>
 
     {{#each news}}
     <div>
       <a href="/news/{{_id}}"><img src="/assets/fac.png"></a>
-      <h3>{{this.news.title}}</h3>
+      <a href="/news/{{_id}}">{{this.news.title}}</a>
     </div>
     {{/each}}
 
