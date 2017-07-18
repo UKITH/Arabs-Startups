@@ -1,0 +1,19 @@
+{{> navbar}}
+
+<div >
+  <h1>Tech & Startup News</h1>
+  <div>
+    <div>
+      <a href="/news/{{_id}}"><img src="/assets/fac.png"></a>
+      <h2>{{this.SingleNews.title}}</h3>
+    </div>
+
+    {{#each news}}
+    <div>
+      <a href="/news/{{_id}}"><img src="/assets/fac.png"></a>
+      <h3>{{this.news.title}}</h3>
+    </div>
+    {{/each}}
+
+  </div>
+</div>
