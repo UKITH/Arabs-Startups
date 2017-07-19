@@ -10,6 +10,6 @@ function _myMap () {
   var _marker = new google.maps.Marker({
     position: new google.maps.LatLng(mapDiv.dataset.lat, mapDiv.dataset.lng),
     map: map,
-    title: mapDiv.dataset.name
+    title: mapDiv.dataset.title
   })
 }
