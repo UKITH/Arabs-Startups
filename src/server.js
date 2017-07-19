@@ -10,7 +10,12 @@ app.engine('hbs', hbs({
   defaultLayout: 'main',
   layoutsDir: path.join(__dirname, './', 'views/layouts'),
   partialsDir: path.join(__dirname, './', 'views/partials'),
-  extname: 'hbs'
+  extname: 'hbs',
+  helpers: {
+    getMapLink: () => {
+      return `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API}&callback=_myMap`
+    }
+  }
 }));
 app.use(express.static('public'))
 app.use(bodyParser.json());
