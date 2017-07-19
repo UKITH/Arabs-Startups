@@ -3,15 +3,15 @@
   <div>
     <div>
       <a href="/news/{{_id}}"><img src="/assets/fac.png"></a>
-      <a href="/news/{{_id}}">{{this.SingleNews.title}}</a>
-      <p>{{this.news.subHead}}</p>
+      <a href="/news/{{_id}}">{{this.SingleNews.newsTitle}}</a>
+      <p>{{this.news.subhead}}</p>
       <a href="/news/{{_id}}">Read More</a>
     </div>
 
     {{#each news}}
     <div>
       <a href="/news/{{_id}}"><img src="/assets/fac.png"></a>
-      <a href="/news/{{_id}}">{{this.news.title}}</a>
+      <a href="/news/{{_id}}">{{this.news.newsTitle}}</a>
     </div>
     {{/each}}
 
