@@ -3,7 +3,7 @@
   {{#each upcomingEvents}}
   <span>{{this.date}}</span>
   <div class="">
-    {{this.time}}
+    {{this.eventTime}}
   </div>
   <div class="">
     {{this.title}}
@@ -15,10 +15,10 @@
   {{/each}}
 
   <h2>Past Events</h2>
-  {{#each events}}
+  {{#each pastEvents}}
   <span>{{this.date}}</span>
   <div class="">
-    {{this.time}}
+    {{this.eventTime}}
   </div>
   <div class="">
     {{this.title}}
@@ -26,7 +26,4 @@
   </div>
   {{/each}}
   </div>
-
-
-
 </div>
