@@ -6,7 +6,7 @@ const eventsSchema = mongoose.Schema({
   eventTime: {type: Number, required: true},
   eventDescription: {type: String, required: true},
   eventOrganiser: {type: String, required: true},
-  eventTitle: {type: String, required: true}
+  eventAddress: {type: String, required: true}
 });
 
 const mockEvents = mongoose.model('Mock Events', eventsSchema);
