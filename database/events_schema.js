@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 
 const eventsSchema = mongoose.Schema({
   eventTitle: {type: String, required: true},
-  eventDate: {type: Date, min: Date.now(), required},
-  eventTime: {type: Number, required},
-  eventDescription: {type: String, required},
-  eventOrganiser: {type: String, required},
-  eventTitle: {type: String, required}
+  eventDate: {type: Date, min: Date.now(), required: true},
+  eventTime: {type: Number, required: true},
+  eventDescription: {type: String, required: true},
+  eventOrganiser: {type: String, required: true},
+  eventTitle: {type: String, required: true}
 });
 
 const mockEvents = mongoose.model('Mock Events', eventsSchema);
