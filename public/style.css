@@ -29,6 +29,10 @@
 	color: #5d5b6d;
 }
 
+.bg-navbar{
+  color: #9B9B9B;
+  background: rgba(0,0,0,0.1);
+}
 textarea {
 	resize: none;
 }
