@@ -1,22 +1,22 @@
 <div class="">
   <div class="">
     <div class="">
-      <h1>{{this.events.title}}</h1>
-      <p>{{this.events.description}}</p>
+      <h1>{{this.events.eventTitle}}</h1>
+      <p>{{this.events.eventDescription}}</p>
     </div>
     <div class="">
       <a href="#">RSVP</a>
-      <span>{{this.events.date}}</span>
+      <span>{{this.events.eventDate}}</span>
       <span>{{this.events.eventTime}}</span>
     </div>
   </div>
   <div class="">
-    <div id="google-map" class="h4 w4" data-lat={{latlng.lat}} data-lng={{latlng.lng}} data-title="{{this.event.title}}">
+    <div id="google-map" class="h4 w4" data-lat={{latlng.lat}} data-lng={{latlng.lng}} data-title="{{this.event.eventTitle}}">
     </div>
     <div class="">
       <label for="organiser">Organised by</label>
       <span id="organiser">{{this.events.eventOrganiser}}</span>
-      <address class="">{{this.events.address}}</address>
+      <address class="">{{this.events.eventAddress}}</address>
     </div>
   </div>
 </div>
