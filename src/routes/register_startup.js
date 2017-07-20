@@ -1,4 +1,4 @@
-const { mockCollection } = require('../../database/schema.js');
+const { mockCollection } = require('../../database/startup_schema.js');
 const mongoose = require('mongoose');
 
 module.exports = (req, res) => {
