@@ -1,4 +1,4 @@
-const { mockCollection } = require('../../database/schema.js');
+const { mockCollection } = require('../../database/startup_schema.js');
 
 module.exports = (req, res) => {
   const id = req.params.id;
