@@ -1,4 +1,4 @@
-const { mockCollection } = require('../database/startup_schema.js');
+const { mockCollection } = require('../../database/startup_schema.js');
 
 const findAllStartupsStartups = (options, hbs, response) => {
   mockCollection.find(options, (error, startups) => {
