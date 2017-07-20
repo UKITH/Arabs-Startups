@@ -2,16 +2,16 @@
   <h1>Tech & Startup News</h1>
   <div>
     <div>
-      <a href="/news/{{_id}}"><img src="/assets/fac.png"></a>
-      <a href="/news/{{_id}}">{{this.SingleNews.newsTitle}}</a>
-      <p>{{this.news.subhead}}</p>
-      <a href="/news/{{_id}}">Read More</a>
+      <a href="/news/{{this.SingleNews._id}}"><img src="/assets/fac.png"></a>
+      <a href="/news/{{this.SingleNews._id}}">{{this.SingleNews.newsTitle}}</a>
+      <p>{{this.SingleNews.subtitle}}</p>
+      <a href="/news/{{this.SingleNews._id}}">Read More</a>
     </div>
 
     {{#each news}}
     <div>
       <a href="/news/{{_id}}"><img src="/assets/fac.png"></a>
-      <a href="/news/{{_id}}">{{this.news.newsTitle}}</a>
+      <a href="/news/{{_id}}">{{this.newsTitle}}</a>
     </div>
     {{/each}}
 
