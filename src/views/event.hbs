@@ -1,0 +1,25 @@
+<div class="">
+  <div class="">
+    <div class="">
+      <h1>{{this.event.eventTitle}}</h1>
+      <p>{{this.event.eventDescription}}</p>
+    </div>
+    <div class="">
+      <a href="">RSVP</a>
+      <span>{{this.event.eventDate}}</span>
+      <span>{{this.event.eventTime}}</span>
+    </div>
+  </div>
+  <div class="">
+    <div id="google-map" class="h4 w4" data-lat={{latlng.lat}} data-lng={{latlng.lng}} data-title="{{this.event.eventTitle}}">
+    </div>
+    <div class="">
+      <label for="organiser">Organised by</label>
+      <span id="organiser">{{this.event.eventOrganiser}}</span>
+      <address class="">{{this.event.eventAddress}}</address>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/map.js"></script>
+<script src={{{getMapLink}}}></script>
