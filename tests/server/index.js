@@ -13,7 +13,7 @@ const server = require('../../src/server.js');
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
-  mockCollection.remove({startupName: 'FAC'}, (err) => {
+  mockCollection.find({startupName: 'FAC'}).remove((err) => {
     if (err) {
       console.log(err);
       return
@@ -115,10 +115,6 @@ tape('Test for results', (t) => {
     t.error(err, 'No Error');
     t.equal(res.status, 200, 'Should equal 200');
     t.equal(res.text.includes(html), true, 'Should render the results page');
-  })
-  supertest(server).get('/search?search=&sector=1').end((err, res) => {
-    t.error(err, 'No Error');
-    t.equal(res.status, 200, 'Should equal 200');
     t.end();
     db.close();
   })
