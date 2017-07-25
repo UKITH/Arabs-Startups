@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const testCollection = require('../database/startup_schema.js');
 const app = require('./server.js');
 require('env2')('./config.env');
 

@@ -1,13 +1,5 @@
-const { mockNews } = require('../../database/news_schema.js');
+const findNews = require('../actions/find_news.js');
 
 module.exports = (req, res) => {
-  const id = req.params.id;
-  mockNews.findOne({_id:id}, (error, news) => {
-    if (error) res.render('not_found')
-    else {
-      res.render('news', {
-        news: news
-      })
-    }
-  })
+  findNews(req.params.id, 'news', res);
 }
