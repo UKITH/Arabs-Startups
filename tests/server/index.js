@@ -13,13 +13,6 @@ const server = require('../../src/server.js');
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
-  mockCollection.find({startupName: 'FAC'}).remove((err) => {
-    if (err) {
-      console.log(err);
-      return
-    }
-    console.log('removed');
-  });
   console.log("connected db");
 })
 
@@ -63,6 +56,16 @@ tape('Test for register startup route', (t) => {
   supertest(server).post('/registerStartup')
   .send(expected)
   .end((err, res) => {
+    mockCollection.find({startupName: 'FAC'}, (err, startup) => {
+      t.ok(startup, 'The startup is in the database');
+    })
+    mockCollection.find({startupName: 'FAC'}).remove((err) => {
+      if (err) {
+        console.log(err);
+        return
+      }
+      console.log('Removed');
+    });
     t.error(err, 'No Error');
     t.end();
   })
