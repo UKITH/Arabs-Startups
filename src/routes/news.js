@@ -5,7 +5,7 @@ module.exports = (req, res) => {
   mockNews.findOne({_id:id}, (error, news) => {
     if (error) res.render('not_found')
     else {
-      res.render('news.hbs', {
+      res.render('news', {
         news: news
       })
     }
