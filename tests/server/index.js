@@ -123,7 +123,7 @@ tape('Test for results', (t) => {
 })
 
 tape('Testing all events functionality page', (t) => {
-  let html = '<h1>Upcoming Events</h1>'
+  let html = '<span>Thu Aug 24 2017 14:29:47 GMT+0300 (IDT)</span>'
   supertest(server).get('/allEvents').end((err, res) => {
     t.error(err, 'No Error');
     t.ok(res.text.includes(html), 'Finds all the events');
