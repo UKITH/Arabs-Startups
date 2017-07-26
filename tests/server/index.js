@@ -119,6 +119,15 @@ tape('Test for results', (t) => {
     t.equal(res.status, 200, 'Should equal 200');
     t.equal(res.text.includes(html), true, 'Should render the results page');
     t.end();
+  })
+})
+
+tape('Test news section page', (t) => {
+  let html = '<p>at the end mario got the lazy plumber to fix the water cooler</p>';
+  supertest(server).get('/allNews').end((err, res) => {
+    t.error(err, 'No Error');
+    t.ok(res.text.includes(html), 'All events should be rendered');
+    t.end();
     db.close();
   })
 })
