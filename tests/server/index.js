@@ -119,6 +119,15 @@ tape('Test for results', (t) => {
     t.equal(res.status, 200, 'Should equal 200');
     t.equal(res.text.includes(html), true, 'Should render the results page');
     t.end();
+  })
+})
+
+tape('Test single news page', (t) => {
+  let html = '<h1>Water cooler in the Guesthouse</h1>';
+  supertest(server).get('/news/5970cde547379a103492134b').end((err, res) => {
+    t.error(err, 'No Error');
+    t.ok(res.text.includes(html), 'Should render the right news');
+    t.end();
     db.close();
   })
 })
