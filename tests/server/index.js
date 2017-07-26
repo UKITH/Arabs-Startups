@@ -119,6 +119,16 @@ tape('Test for results', (t) => {
     t.equal(res.status, 200, 'Should equal 200');
     t.equal(res.text.includes(html), true, 'Should render the results page');
     t.end();
+  })
+})
+
+tape('Testing all events functionality page', (t) => {
+  let html = '<span>Thu Aug 24 2017 14:29:47 GMT+0300 (IDT)</span>'
+  supertest(server).get('/allEvents').end((err, res) => {
+    console.log(res.text);
+    t.error(err, 'No Error');
+    t.equal(res.text.includes(html), true, 'Finds all the events');
+    t.end();
     db.close();
   })
 })

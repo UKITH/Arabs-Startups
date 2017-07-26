@@ -1,4 +1,4 @@
-const { mockEvents } = require('../database/events_schema.js');
+const { mockEvents } = require('../../database/events_schema.js');
 
 const findAllEvents = (hbs, response) => {
   mockEvents.find({}, (error, events) => {
