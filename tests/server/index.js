@@ -123,10 +123,9 @@ tape('Test for results', (t) => {
 })
 
 tape('Testing all events functionality page', (t) => {
-  let html = '<span>Thu Aug 24 2017 14:29:47 GMT+0300 (IDT)</span>'
+  let html = 'FACN3'
   supertest(server).get('/allEvents').end((err, res) => {
     t.error(err, 'No Error');
-    console.log(res.text);
     t.ok(res.text.includes(html), 'Finds all the events');
     t.end();
     db.close();
