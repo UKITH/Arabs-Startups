@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
-const testCollection = require('../database/startup_schema.js');
 const app = require('./server.js');
 require('env2')('./config.env');
 
-mongoose.connect(process.env.DB_URL);
+mongoose.connect(process.env.DB_URL, {
+  useMongoClient: true
+});
 
 const db = mongoose.connection;
 
