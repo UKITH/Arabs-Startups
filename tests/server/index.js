@@ -4,6 +4,8 @@ const supertest = require('supertest');
 const exphbs = require('express-handlebars');
 require('env2')('./config.env');
 
+const DateToString = require('../../src/helpers/date_to_string.js');
+
 mongoose.connect(process.env.DB_URL, {
   useMongoClient: true
 });
@@ -121,4 +123,11 @@ tape('Test for results', (t) => {
     t.end();
     db.close();
   })
+})
+
+tape('Test the date helper function', (t) => {
+  date = new Date().toDateString();
+  formatedDate = DateToString(new Date());
+  t.equal(date, formatedDate, 'The date was trimmed down');
+  t.end();
 })
