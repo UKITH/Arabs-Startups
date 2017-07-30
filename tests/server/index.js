@@ -122,16 +122,25 @@ tape('Test for results', (t) => {
   })
 })
 
+tape('Testing all events functionality page', (t) => {
+  let html = 'FACN3'
+  supertest(server).get('/allEvents').end((err, res) => {
+    t.error(err, 'No Error');
+    t.ok(res.text.includes(html), 'Finds all the events');
+    t.end();
+  })
+})
+
 tape('Test Certain Event Page Functionality', (t) => {
   let html = '<h1>FACN3</h1>\n'
   let htmlErr = 'find any startup in our database that match your selections';
   supertest(server).get('/event/5970aee1b36db104139d3af9').end((err, res) => {
     t.error(err, 'No Error');
     t.equal(res.text.includes(html), true, 'Should recieve the right event');
+    })
     supertest(server).get('/event/5970aee1b36db104139d3af').end((err, res) => {
       t.equal(res.text.includes(htmlErr), true, 'Should get the 404 page');
       t.end();
       db.close();
-    })
   })
 })
