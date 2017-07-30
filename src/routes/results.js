@@ -1,4 +1,4 @@
-const findAllStartups = require('../actions/find_all_startups.js');
+const findAllStartups = require('../actions/get_all_startups.js');
 
 module.exports = (req, res) => {
   let options = {};
