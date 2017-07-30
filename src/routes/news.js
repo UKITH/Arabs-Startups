@@ -1,5 +1,5 @@
-const findNews = require('../actions/get_news.js');
+const getNews = require('../actions/get_news.js');
 
 module.exports = (req, res) => {
-  findNews(req.params.id, 'news', res);
+  getNews(req.params.id, 'news', res);
 }

@@ -1,6 +1,6 @@
 const { mockCollection } = require('../../database/startup_schema.js');
 
-const findAllStartups = (options, hbs, response) => {
+const getAllStartups = (options, hbs, response) => {
   mockCollection.find(options, (error, startups) => {
     if (error) response.render('not_found')
     else {
@@ -12,4 +12,4 @@ const findAllStartups = (options, hbs, response) => {
 }
 
 
-module.exports = findAllStartups;
+module.exports = getAllStartups;
