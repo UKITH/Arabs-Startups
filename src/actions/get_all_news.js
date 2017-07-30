@@ -1,6 +1,6 @@
 const { mockNews } = require('../../database/news_schema.js');
 
-const findAllNews = (hbs, response) => {
+const getAllNews = (response) => {
   mockNews.find((error, news) => {
     if (error) response.render('not_found')
     else {
@@ -12,4 +12,4 @@ const findAllNews = (hbs, response) => {
   })
 }
 
-module.exports = findAllNews
+module.exports = getAllNews

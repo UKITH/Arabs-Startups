@@ -126,7 +126,7 @@ tape('Test news section page', (t) => {
   let html = '<p>at the end mario got the lazy plumber to fix the water cooler</p>';
   supertest(server).get('/allNews').end((err, res) => {
     t.error(err, 'No Error');
-    t.ok(res.text.includes(html), 'All events should be rendered');
+    t.ok(res.text.includes(html), 'All news should be rendered');
     t.end();
    })
 })
