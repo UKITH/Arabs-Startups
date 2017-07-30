@@ -1,4 +1,4 @@
-const findAllStartups = require('../find_all_startups.js');
+const findAllStartups = require('../actions/find_all_startups.js');
 
 module.exports = (req, res) => {
   let options = {};
@@ -63,10 +63,6 @@ module.exports = (req, res) => {
       findAllStartups(options, 'search_results', res);
     break;
 
-    case 'noSearch-noStage-noSector':
-      findAllStartups({}, 'search_results', res)
-    break;
-
-    default: res.render('search_results')
+    default: findAllStartups({}, 'search_results', res)
   }
 }

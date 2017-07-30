@@ -21,6 +21,10 @@
   background-color: #a6a6a6;
 }
 
+.bg-events-purple {
+  background:linear-gradient(-180deg, #716c8f 0%, #45415f 100%)
+}
+
 .text-orange {
 	color: #FF5C38;
 }

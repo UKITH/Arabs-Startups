@@ -1,29 +1,30 @@
-<div class="">
-  <h1>Upcoming Events</h1>
-  {{#each upcomingEvents}}
-  <span>{{this.eventDate}}</span>
-  <div class="">
-    {{this.eventTime}}
-  </div>
-  <div class="">
-    {{this.eventTitle}}
-    {{this.eventAddress}}
-  </div>
-  <div class="">
-    <a href="{{this.rsvp}}">RSVP</a>
-  </div>
-  {{/each}}
-
-  <h2>Past Events</h2>
-  {{#each pastEvents}}
-  <span>{{this.eventDate}}</span>
-  <div class="">
-    {{this.eventTime}}
-  </div>
-  <div class="">
-    {{this.eventTitle}}
-    {{this.eventAddress}}
-  </div>
-  {{/each}}
+<div class="pa4 ">
+  <div class="w-90 fr">
+    <h1 class="fw6 text-granite-gray f1">Upcoming Events</h1>
+    <table class="f6 w-100 vh2">
+      <tbody class="">
+        {{#each upcomingEvents}}
+        <th class="text-granite-gray fl pv3 tl f5">{{{DateToString this.eventDate}}}</th>
+        <tr class="lh-copy near-white">
+          <td class="bg-events-purple w-20 pb4 br3 ph4 br--left  f4">{{this.eventTime}}</td>
+          <td class="pa3 bg-events-purple w-60 br3 br--right tl f4">{{this.eventTitle}}<br>{{this.eventAddress}}</td>
+          <td class="pa3 bg-white w-20">
+          <a class="text-orange no-underline f4" href="{{this.rsvp}}">RSVP</a></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    <h1 class="text-granite-gray">Past Events</h1>
+    <table class="f6 w-80 br2 pa2">
+      <tbody class="">
+        {{#each pastEvents}}
+        <th class="text-granite-gray fl pv3">{{{DateToString this.eventDate}}}</th>
+        <tr class="lh-copy text-granite-gray">
+          <td class="bg-light-gray w-20 pb4 ph4 br2 br--left f4">{{this.eventTime}}</td>
+          <td class="pa3 bg-light-gray w-60 br2 br--right f4">{{this.eventTitle}}<br>{{this.eventAddress}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
   </div>
 </div>
