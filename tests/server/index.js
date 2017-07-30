@@ -29,7 +29,7 @@ tape('Test home route', (t) => {
 
 tape('Test profile page route', (t) => {
   let html = '<h2 class="f1 absolute pt2">MyCity</h2>\n';
-  let html2 = '<h1> Sorry we couldn\'t find any startup in our database that match your selections</h1>\n'
+  let html2 = 'Sorry we could not find what you are searching for'
   supertest(server).get('/startupProfile/595cbfe08d75e77913c05c0e').end((err, res) => {
     t.error(err, 'No Error');
     t.equal(res.status, 200, 'Should equal 200');
@@ -129,11 +129,19 @@ tape('Test single news page', (t) => {
     t.ok(res.text.includes(html), 'Should render the right news');
     t.end();
   })
+}) 
+tape('Test news section page', (t) => {
+  let html = '<p>at the end mario got the lazy plumber to fix the water cooler</p>';
+  supertest(server).get('/allNews').end((err, res) => {
+    t.error(err, 'No Error');
+    t.ok(res.text.includes(html), 'All news should be rendered');
+    t.end();
+   })
 })
 
 tape('Test Certain Event Page Functionality', (t) => {
   let html = '<h1>FACN3</h1>\n'
-  let htmlErr = 'find any startup in our database that match your selections';
+  let htmlErr = 'Sorry we could not find what you are searching for';
   supertest(server).get('/event/5970aee1b36db104139d3af9').end((err, res) => {
     t.error(err, 'No Error');
     t.equal(res.text.includes(html), true, 'Should recieve the right event');
