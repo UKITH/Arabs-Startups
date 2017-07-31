@@ -61,7 +61,6 @@ tape('Test for register startup route', (t) => {
     })
     mockCollection.find({startupName: 'FAC'}).remove((err) => {
       if (err) {
-        console.log(err);
         return
       }
       console.log('Removed');
