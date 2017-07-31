@@ -131,6 +131,16 @@ tape('Testing all events functionality page', (t) => {
   })
  })
 
+
+tape('Test single news page', (t) => {
+  let html = '<h1>Water cooler in the Guesthouse</h1>';
+  supertest(server).get('/news/5970cde547379a103492134b').end((err, res) => {
+    t.error(err, 'No Error');
+    t.ok(res.text.includes(html), 'Should render the right news');
+    t.end();
+  })
+})
+
 tape('Test news section page', (t) => {
   let html = '<p>at the end mario got the lazy plumber to fix the water cooler</p>';
   supertest(server).get('/allNews').end((err, res) => {
