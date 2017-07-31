@@ -141,7 +141,7 @@ tape('Test news section page', (t) => {
 })
 
 tape('Test Certain Event Page Functionality', (t) => {
-  let html = 'FACN3\n'
+  let html = 'FACN3'
   let htmlErr = 'Sorry we could not find what you are searching for';
   supertest(server).get('/event/5970aee1b36db104139d3af9').end((err, res) => {
     t.error(err, 'No Error');
