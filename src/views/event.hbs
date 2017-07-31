@@ -1,25 +1,23 @@
-<div class="">
-  <div class="">
-    <div class="">
-      <h1>{{this.event.eventTitle}}</h1>
-      <p>{{this.event.eventDescription}}</p>
-    </div>
-    <div class="">
-      <a href="#">RSVP</a>
-      <span>{{this.event.eventDate}}</span>
-      <span>{{this.event.eventTime}}</span>
+<div class="cf ph6 ph6-ns pv6 ml5">
+  <div class="fl-ns w-80-ns pr4-ns">
+    <h1 class="mb3 mt0 lh-title mid-gray">{{ this.event.eventTitle}}</h1>
+    <span class="f6 tracked gray">{{this.event.eventDescription}}</span>
+  </div>
+  <div class="fn fl-ns w-20-ns pt5">
+    <a href="{{this.event.rsvp}}" class="h4 lh-copy ma5 no-underline text-orange f4 pt5">RSVP
+    </a>
+    <div class="lh-copy pt3">
+      <span class="text-granite-gray f4 ">{{this.event.eventDate}}</span>
+      <br>
+      <span class="text-granite-gray f4 ">{{this.event.eventTime}}</span>
     </div>
   </div>
-  <div class="">
-    <div id="google-map" class="h4 w4" data-lat={{latlng.lat}} data-lng={{latlng.lng}} data-title="{{this.event.eventTitle}}">
-    </div>
-    <div class="">
-      <label for="organiser">Organised by</label>
-      <span id="organiser">{{this.event.eventOrganiser}}</span>
-      <address class="">{{this.event.eventAddress}}</address>
+  <div class="dt mw6 pv4 pv5-m pv6-ns">
+    <div id="google-map" class="w4 h4 db" data-lat={{latlng.lat}} data-lng={{latlng.lng}} data-title="{{this.event.eventTitle}}">
+    <div class="dtc v-top pl3 text-granite-gray">
+      <label for="organiser" class="i lh-copy pt5">Organised by</label><br>
+      <span id="organiser" class="lh-copy tc">{{this.event.eventOrganiser}}</span>
+      <address class="lh-copy pt5 ">{{this.event.eventAddress}}</address>
     </div>
   </div>
 </div>
-
-<script type="text/javascript" src="/map.js"></script>
-<script src={{{getMapLink}}}></script>
