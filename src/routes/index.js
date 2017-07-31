@@ -11,6 +11,8 @@ const newsForm = require('./admin_news_form.js');
 const eventForm = require('./admin_event_form.js');
 const registerNews = require('./register_news.js');
 const registerEvent = require('./register_event.js');
+const allNews = require('./all_news.js');
+const event = require('./event.js');
 
 router.get('/', searchHome);
 router.post('/registerStartup', registerStartup);
@@ -23,5 +25,7 @@ router.get('/u1k2i3t4h5/newsForm', newsForm);
 router.get('/u1k2i3t4h5/eventForm', eventForm);
 router.post('/u1k2i3t4h5/registerNews', registerNews);
 router.post('/u1k2i3t4h5/registerEvent', registerEvent);
+router.get('/allNews', allNews);
+router.get('/event/:id', event);
 
 module.exports = router;
