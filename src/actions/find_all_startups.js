@@ -11,4 +11,5 @@ const findAllStartups = (options, hbs, response) => {
   })
 }
 
+
 module.exports = findAllStartups;
