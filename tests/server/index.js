@@ -131,8 +131,9 @@ tape('Test single news page', (t) => {
   })
 }) 
 tape('Test news section page', (t) => {
-  let html = '<p>at the end mario got the lazy plumber to fix the water cooler</p>';
+  let html = 'at the end mario got the lazy plumber to fix the water cooler';
   supertest(server).get('/allNews').end((err, res) => {
+    console.log(res.text);
     t.error(err, 'No Error');
     t.ok(res.text.includes(html), 'All news should be rendered');
     t.end();
