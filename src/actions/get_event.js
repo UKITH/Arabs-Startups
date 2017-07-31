@@ -1,6 +1,6 @@
 const { mockEvents } = require('../../database/events_schema.js');
 
-const findEvent = (id, hbs, res) => {
+const getEvent = (id, hbs, res) => {
   mockEvents.findOne({_id:id}, (error, event)=> {
     if(error) res.render('not_found');
     else {
@@ -11,4 +11,4 @@ const findEvent = (id, hbs, res) => {
   })
 }
 
-module.exports = findEvent;
+module.exports = getEvent;
