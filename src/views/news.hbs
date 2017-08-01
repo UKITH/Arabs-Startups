@@ -1,12 +1,12 @@
-<div>
-  <div>
-    <h1>{{this.news.newsTitle}}</h1>
-    <span>{{this.news.newsDate}}</span>
-    <div>
-      {{this.news.subhead}}
-      <img src="/assets/fac.png">
-      <p>{{this.news.newsDescription}}</p>
-      <span>{{this.news.author}}</span>
-    </div>
+<div class="center w-60">
+    <h1 class="fw3 f1 fl ml5 dark-gray w-90 ">{{this.news.newsTitle}}</h1>
+  <div class="tc mt3">
+    <span class="w-80 fl ml4 f4 dib">{{this.news.subtitle}}</span>
+    <span class="f6">{{DateToString this.news.newsDate}}</span>
+    <img src="/assets/fac.png" class="h-50 w-80 mt2 ba br2">
+  </div>
+  <div class="w-100">
+    <p class="ph5 ml3 w-90 f3 lh-copy dark-gray">{{this.news.newsDescription}}</p><br><br>
+    <span class="fl ml4 f2">{{this.news.author}}</span><br><br>
   </div>
 </div>

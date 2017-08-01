@@ -4,6 +4,8 @@ const supertest = require('supertest');
 const exphbs = require('express-handlebars');
 require('env2')('./config.env');
 
+const DateToString = require('../../src/helpers/date_to_string.js');
+
 mongoose.connect(process.env.DB_URL, {
   useMongoClient: true
 });
@@ -61,7 +63,6 @@ tape('Test for register startup route', (t) => {
     })
     mockCollection.find({startupName: 'FAC'}).remove((err) => {
       if (err) {
-        console.log(err);
         return
       }
       console.log('Removed');
@@ -142,8 +143,9 @@ tape('Test single news page', (t) => {
 })
 
 tape('Test news section page', (t) => {
-  let html = '<p>at the end mario got the lazy plumber to fix the water cooler</p>';
+  let html = 'at the end mario got the lazy plumber to fix the water cooler';
   supertest(server).get('/allNews').end((err, res) => {
+    console.log(res.text);
     t.error(err, 'No Error');
     t.ok(res.text.includes(html), 'All news should be rendered');
     t.end();
@@ -151,7 +153,7 @@ tape('Test news section page', (t) => {
 })
 
 tape('Test Certain Event Page Functionality', (t) => {
-  let html = '<h1>FACN3</h1>\n'
+  let html = 'FACN3'
   let htmlErr = 'Sorry we could not find what you are searching for';
   supertest(server).get('/event/5970aee1b36db104139d3af9').end((err, res) => {
     t.error(err, 'No Error');
@@ -162,4 +164,11 @@ tape('Test Certain Event Page Functionality', (t) => {
       t.end();
       db.close();
   })
+})
+
+tape('Test the date helper function', (t) => {
+  date = new Date().toDateString();
+  formatedDate = DateToString(new Date());
+  t.equal(date, formatedDate, 'The date was trimmed down');
+  t.end();
 })
