@@ -61,7 +61,6 @@ tape('Test for register startup route', (t) => {
     })
     mockCollection.find({startupName: 'FAC'}).remove((err) => {
       if (err) {
-        console.log(err);
         return
       }
       console.log('Removed');
@@ -129,7 +128,7 @@ tape('Test single news page', (t) => {
     t.ok(res.text.includes(html), 'Should render the right news');
     t.end();
   })
-}) 
+})
 tape('Test news section page', (t) => {
   let html = 'at the end mario got the lazy plumber to fix the water cooler';
   supertest(server).get('/allNews').end((err, res) => {
@@ -141,7 +140,7 @@ tape('Test news section page', (t) => {
 })
 
 tape('Test Certain Event Page Functionality', (t) => {
-  let html = '<h1>FACN3</h1>\n'
+  let html = 'FACN3'
   let htmlErr = 'Sorry we could not find what you are searching for';
   supertest(server).get('/event/5970aee1b36db104139d3af9').end((err, res) => {
     t.error(err, 'No Error');
