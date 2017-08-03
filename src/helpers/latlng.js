@@ -20,4 +20,4 @@ const getLatLng = (address, cb) => {
   })
 }
 
-module.exports = getLatLng
+module.exports = getLatLng;
