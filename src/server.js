@@ -3,7 +3,9 @@ const hbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
+
 const router = require('./routes/index.js');
+const DateToString = require('./helpers/date_to_string.js');
 
 const app = express();
 
@@ -13,11 +15,9 @@ app.engine('hbs', hbs({
   partialsDir: path.join(__dirname, './', 'views/partials'),
   extname: 'hbs',
   helpers: {
-    getMapLink: () => {
-      return `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API}&callback=_myMap`
-    }
+    DateToString,
   }
-}));
+
 app.use(express.static('public'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
