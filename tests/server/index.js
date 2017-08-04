@@ -31,7 +31,7 @@ tape('Test home route', (t) => {
 
 tape('Test profile page route', (t) => {
   let html = '<h2 class="f1 absolute pt2">MyCity</h2>\n';
-  let html2 = '<h1> Sorry we couldn\'t find any startup in our database that match your selections</h1>\n'
+  let html2 = 'Sorry we could not find what you are searching for'
   supertest(server).get('/startupProfile/595cbfe08d75e77913c05c0e').end((err, res) => {
     t.error(err, 'No Error');
     t.equal(res.status, 200, 'Should equal 200');
@@ -63,7 +63,6 @@ tape('Test for register startup route', (t) => {
     })
     mockCollection.find({startupName: 'FAC'}).remove((err) => {
       if (err) {
-        console.log(err);
         return
       }
       console.log('Removed');
@@ -121,7 +120,38 @@ tape('Test for results', (t) => {
     t.equal(res.status, 200, 'Should equal 200');
     t.equal(res.text.includes(html), true, 'Should render the results page');
     t.end();
-    db.close();
+  })
+})
+
+tape('Test single news page', (t) => {
+  let html = '<h1>Water cooler in the Guesthouse</h1>';
+  supertest(server).get('/news/5970cde547379a103492134b').end((err, res) => {
+    t.error(err, 'No Error');
+    t.ok(res.text.includes(html), 'Should render the right news');
+    t.end();
+  })
+})
+tape('Test news section page', (t) => {
+  let html = 'at the end mario got the lazy plumber to fix the water cooler';
+  supertest(server).get('/allNews').end((err, res) => {
+    console.log(res.text);
+    t.error(err, 'No Error');
+    t.ok(res.text.includes(html), 'All news should be rendered');
+    t.end();
+   })
+})
+
+tape('Test Certain Event Page Functionality', (t) => {
+  let html = 'FACN3'
+  let htmlErr = 'Sorry we could not find what you are searching for';
+  supertest(server).get('/event/5970aee1b36db104139d3af9').end((err, res) => {
+    t.error(err, 'No Error');
+    t.equal(res.text.includes(html), true, 'Should recieve the right event');
+    })
+    supertest(server).get('/event/5970aee1b36db104139d3af').end((err, res) => {
+      t.equal(res.text.includes(htmlErr), true, 'Should get the 404 page');
+      t.end();
+      db.close();
   })
 })
 
