@@ -124,7 +124,7 @@ tape('Test for results', (t) => {
 })
 
 tape('Test single news page', (t) => {
-  let html = '<h1>Water cooler in the Guesthouse</h1>';
+  let html = 'Water cooler in the Guesthouse';
   supertest(server).get('/news/5970cde547379a103492134b').end((err, res) => {
     t.error(err, 'No Error');
     t.ok(res.text.includes(html), 'Should render the right news');
@@ -134,7 +134,6 @@ tape('Test single news page', (t) => {
 tape('Test news section page', (t) => {
   let html = 'at the end mario got the lazy plumber to fix the water cooler';
   supertest(server).get('/allNews').end((err, res) => {
-    console.log(res.text);
     t.error(err, 'No Error');
     t.ok(res.text.includes(html), 'All news should be rendered');
     t.end();
