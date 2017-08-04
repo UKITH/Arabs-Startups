@@ -168,7 +168,7 @@ tape('Test the map link helper', (t) => {
   t.end();
 })
 
-tape('Test the latlng helper', (t) => {
+tape('Test the latlng map helper', (t) => {
   let expectedFailedAddress = 'data-lat=32.7014255 data-lng=35.2967795';
   supertest(server).get('/event/5970af73b36db104139d3afd').end((err, res) => {
     t.ok(res.text.includes(expectedFailedAddress), 'returns default address when address not found');
