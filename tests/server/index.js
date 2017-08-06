@@ -126,6 +126,16 @@ tape('Test for results', (t) => {
   })
 })
 
+tape('Testing all events functionality page', (t) => {
+  let html = 'FACN3'
+  supertest(server).get('/allEvents').end((err, res) => {
+    t.error(err, 'No Error');
+    t.ok(res.text.includes(html), 'Finds all the events');
+    t.end();
+  })
+ })
+
+
 tape('Test single news page', (t) => {
   let html = 'Water cooler in the Guesthouse';
   supertest(server).get('/news/5970cde547379a103492134b').end((err, res) => {
@@ -134,6 +144,7 @@ tape('Test single news page', (t) => {
     t.end();
   })
 })
+
 tape('Test news section page', (t) => {
   let html = 'at the end mario got the lazy plumber to fix the water cooler';
   supertest(server).get('/allNews').end((err, res) => {
