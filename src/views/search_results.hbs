@@ -63,7 +63,7 @@
   <div class="mv5 ml3">
     <h1 class="f1 fw3 text-granite-gray">Startups</h1>
 
-    {{#each startups}}
+    {{#each (limitResults startups)}}
     <div class="dib mh1 tc">
       <a href="/startupProfile/{{_id}}" ><img src="/assets/fac.png" alt="" class="h4 w4 ba br2 pa5"></a>
       <h3 class="text-granite-gray">{{this.startupName}}</h3>
