@@ -4,7 +4,10 @@ const supertest = require('supertest');
 const exphbs = require('express-handlebars');
 require('env2')('./config.env');
 
+
 const DateToString = require('../../src/helpers/date_to_string.js');
+const getMapLink = require('../../src/helpers/get_map_link.js');
+const latLng = require('../../src/helpers/latlng.js');
 
 mongoose.connect(process.env.DB_URL, {
   useMongoClient: true
@@ -150,7 +153,6 @@ tape('Test Certain Event Page Functionality', (t) => {
     supertest(server).get('/event/5970aee1b36db104139d3af').end((err, res) => {
       t.equal(res.text.includes(htmlErr), true, 'Should get the 404 page');
       t.end();
-      db.close();
   })
 })
 
@@ -159,4 +161,19 @@ tape('Test the date helper function', (t) => {
   formatedDate = DateToString(new Date());
   t.equal(date, formatedDate, 'The date was trimmed down');
   t.end();
+})
+
+tape('Test the map link helper', (t) => {
+  let expectedLink = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API}&callback=myMap`
+  t.equal(getMapLink(), expectedLink, 'returns the right link');
+  t.end();
+})
+
+tape('Test the latlng map helper', (t) => {
+  let expectedFailedAddress = 'data-lat=32.7014255 data-lng=35.2967795';
+  supertest(server).get('/event/5970af73b36db104139d3afd').end((err, res) => {
+    t.ok(res.text.includes(expectedFailedAddress), 'returns default address when address not found');
+    t.end();
+    db.close();
+  })
 })

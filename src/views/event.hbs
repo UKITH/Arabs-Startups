@@ -12,14 +12,15 @@
       <span class="text-granite-gray f4 ">{{this.event.eventTime}}</span>
     </div>
   </div>
-  <div class="dt mw6 pv4 pv5-m pv6-ns">
-    <div id="google-map" class="w4 h4 db" data-lat={{latlng.lat}} data-lng={{latlng.lng}} data-title="{{this.event.eventTitle}}">
-    <div class="dtc v-top pl3 text-granite-gray">
+    <div id="google-map"  class="w-50 fl h-50" data-lat={{latlng.lat}} data-lng={{latlng.lng}} data-title="{{this.event.eventTitle}}">
+    </div>
+  <div class="dt mw6 dib">
+    <div class=" v-top pl3 text-granite-gray">
       <label for="organiser" class="i lh-copy pt5">Organised by</label><br>
       <span id="organiser" class="lh-copy tc">{{this.event.eventOrganiser}}</span>
-      <address class="lh-copy pt5 ">{{this.event.eventAddress}}</address>
+      <address class="lh-copy pt5 v-btm">{{this.event.eventAddress}}</address>
     </div>
-  </div>
-</div
+</div>
 
 <script type="text/javascript" src="/map.js"></script>
+<script type="text/javascript" src={{{getMapLink}}}></script>
