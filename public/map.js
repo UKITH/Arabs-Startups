@@ -1,4 +1,4 @@
-function _myMap () {
+function myMap () {
   var mapDiv = document.getElementById('google-map')
   var mapOptions = {
     center: new google.maps.LatLng(mapDiv.dataset.lat, mapDiv.dataset.lng),

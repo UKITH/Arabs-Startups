@@ -1,17 +1,17 @@
-<div >
-  <h1>Tech & Startup News</h1>
-  <div>
-    <div>
-      <a href="/news/{{this.SingleNews._id}}"><img src="/assets/fac.png"></a>
-      <a href="/news/{{this.SingleNews._id}}">{{this.SingleNews.newsTitle}}</a>
-      <p>{{this.SingleNews.subtitle}}</p>
-      <a href="/news/{{this.SingleNews._id}}">Read More</a>
+<div class="w-60 center db">
+  <h1 class="fl tracked mt4 mid-gray">Tech & Startup News</h1>
+  <div class="dib w-100">
+    <div class="fl dib w-two-thirds mb2">
+      <a href="/news/{{this.SingleNews._id}}"><img src="/assets/fac.png" class="h-50  w-90 mv3 ba br2"></a><br>
+      <a href="/news/{{this.SingleNews._id}}" class="dib mid-gray no-underline f3 w-90">{{this.SingleNews.newsTitle}}</a>
+      <p class="w-90 text-granite-gray">At the end mario got the lazy plumber to fix the water coolerat the end mario got the lazy plumber to fix the water coolerat the end mario got the lazy plumber to fix the water coolerat the end mario got the lazy plumber to fix the water cooler</p>
+      <a href="/news/{{this.SingleNews._id}}" class="text-orange">Read More</a>
     </div>
 
     {{#each news}}
-    <div>
-      <a href="/news/{{_id}}"><img src="/assets/fac.png"></a>
-      <a href="/news/{{_id}}">{{this.newsTitle}}</a>
+    <div class="dib fl mv3 w-third">
+      <a href="/news/{{_id}}"><img src="/assets/fac.png" class="dib h4 w4 ba br2 ph4 pv4 b--gray mb2"></a><br>
+      <a href="/news/{{_id}}" class="no-underline w-70 fl text-granite-gray">{{this.newsTitle}}</a>
     </div>
     {{/each}}
 

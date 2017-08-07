@@ -4,6 +4,11 @@ const supertest = require('supertest');
 const exphbs = require('express-handlebars');
 require('env2')('./config.env');
 
+
+const DateToString = require('../../src/helpers/date_to_string.js');
+const getMapLink = require('../../src/helpers/get_map_link.js');
+const latLng = require('../../src/helpers/latlng.js');
+
 mongoose.connect(process.env.DB_URL, {
   useMongoClient: true
 });
@@ -61,7 +66,6 @@ tape('Test for register startup route', (t) => {
     })
     mockCollection.find({startupName: 'FAC'}).remove((err) => {
       if (err) {
-        console.log(err);
         return
       }
       console.log('Removed');
@@ -122,16 +126,27 @@ tape('Test for results', (t) => {
   })
 })
 
+tape('Testing all events functionality page', (t) => {
+  let html = 'FACN3'
+  supertest(server).get('/allEvents').end((err, res) => {
+    t.error(err, 'No Error');
+    t.ok(res.text.includes(html), 'Finds all the events');
+    t.end();
+  })
+ })
+
+
 tape('Test single news page', (t) => {
-  let html = '<h1>Water cooler in the Guesthouse</h1>';
+  let html = 'Water cooler in the Guesthouse';
   supertest(server).get('/news/5970cde547379a103492134b').end((err, res) => {
     t.error(err, 'No Error');
     t.ok(res.text.includes(html), 'Should render the right news');
     t.end();
   })
-}) 
+})
+
 tape('Test news section page', (t) => {
-  let html = '<p>at the end mario got the lazy plumber to fix the water cooler</p>';
+  let html = 'at the end mario got the lazy plumber to fix the water cooler';
   supertest(server).get('/allNews').end((err, res) => {
     t.error(err, 'No Error');
     t.ok(res.text.includes(html), 'All news should be rendered');
@@ -140,7 +155,7 @@ tape('Test news section page', (t) => {
 })
 
 tape('Test Certain Event Page Functionality', (t) => {
-  let html = '<h1>FACN3</h1>\n'
+  let html = 'FACN3'
   let htmlErr = 'Sorry we could not find what you are searching for';
   supertest(server).get('/event/5970aee1b36db104139d3af9').end((err, res) => {
     t.error(err, 'No Error');
@@ -149,7 +164,28 @@ tape('Test Certain Event Page Functionality', (t) => {
     supertest(server).get('/event/5970aee1b36db104139d3af').end((err, res) => {
       t.equal(res.text.includes(htmlErr), true, 'Should get the 404 page');
       t.end();
-      db.close();
+  })
+})
+
+tape('Test the date helper function', (t) => {
+  date = new Date().toDateString();
+  formatedDate = DateToString(new Date());
+  t.equal(date, formatedDate, 'The date was trimmed down');
+  t.end();
+})
+
+tape('Test the map link helper', (t) => {
+  let expectedLink = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API}&callback=myMap`
+  t.equal(getMapLink(), expectedLink, 'returns the right link');
+  t.end();
+})
+
+tape('Test the latlng map helper', (t) => {
+  let expectedFailedAddress = 'data-lat=32.7014255 data-lng=35.2967795';
+  supertest(server).get('/event/5970af73b36db104139d3afd').end((err, res) => {
+    t.ok(res.text.includes(expectedFailedAddress), 'returns default address when address not found');
+    t.end();
+    db.close();
   })
 })
 
