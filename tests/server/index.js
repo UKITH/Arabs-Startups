@@ -8,7 +8,6 @@ require('env2')('./config.env');
 const DateToString = require('../../src/helpers/date_to_string.js');
 const getMapLink = require('../../src/helpers/get_map_link.js');
 const latLng = require('../../src/helpers/latlng.js');
-const limitResults = require('../../src/helpers/limit_results.js');
 
 mongoose.connect(process.env.DB_URL, {
   useMongoClient: true
@@ -188,10 +187,4 @@ tape('Test the latlng map helper', (t) => {
     t.end();
     db.close();
   })
-})
-
-tape('Test the limit results helper', (t) => {
-  t.deepEqual(limitResults([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), [1, 2, 3, 4, 5, 6, 7, 8, 9], 'the results will go down to only 9');
-  t.deepEqual(limitResults([1]), [1], 'should return the same amount of results');
-  t.end();
 })
