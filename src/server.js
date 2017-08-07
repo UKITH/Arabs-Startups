@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 const router = require('./routes/index.js');
 const DateToString = require('./helpers/date_to_string.js');
 const getMapLink = require('./helpers/get_map_link.js');
-const limitResults = require('./helpers/limit_results.js');
 
 const app = express();
 
@@ -17,8 +16,7 @@ app.engine('hbs', hbs({
   extname: 'hbs',
   helpers: {
     DateToString,
-    getMapLink,
-    limitResults
+    getMapLink
   }
 }));
 
