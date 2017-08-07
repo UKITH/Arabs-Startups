@@ -7,7 +7,7 @@
 
       <fieldset class="b--transparent">
         <label for="search-input"></label>
-        <input class="bg-dark-purple ba w-25 ph2 h2 white-60 input-reset" type="text" name="search" id="search-input" placeholder="Search Startups"><!--
+        <input class="bg-dark-purple ba w-30 ph3 h2 white-60 input-reset" type="text" name="search" id="search-input" placeholder="Search Startups"><!--
       --><select class="bg-dark-purple  ba b--near-white h2 ph2 w-15 b white-60 overflow-hidden" id="select-sector" name="sector" >
           <option value="">any sector</option>
           <option value="Health">Health</option>
@@ -21,7 +21,18 @@
           <option value="Cities">Cities</option>
           <option value="Other">Other</option>
         </select><!--
-      --><input class="bg-orange near-white br1 bn b h2" type="submit" value="search">
+      --><input class="bg-orange near-white br1 bn b h2 w-10" type="submit" value="search">
+      <div class="w-50 center tl">
+        <p class="dib moon-gray mt1 w-60">Enter a keyword. and/or choose a sector</p><!--
+        --><nav class="moon-gray tl w-100"> Popular searches:
+          <a class="moon-gray" href="/search?search=&sector=Cities">Cities,</a>
+          <a class="moon-gray" href="/search?search=&sector=E-Commerce">E-Commerce,</a>
+          <a class="moon-gray" href="/search?search=&sector=Other">Other,</a>
+          <a class="moon-gray" href="/search?search=&sector=Software">Software,</a>
+          <a class="moon-gray" href="/search?search=&sector=Hardware">Hardware,</a>
+          <a class="moon-gray" href="/search?search=&sector=Health">Health</a>
+        </nav>
+      </div>
       </fieldset>
     </form>
   </div>
@@ -54,7 +65,7 @@
           <label for="founder-name" class="f5 tl b db mt2">Your full name* </label>
           <input type="text" name="founder-name" id="founder-name" class="input-reset bg-light-gray br2 ba b--black-20 pa2 mt2 db w-100" required>
 
-          <label for="coFounder-name" class="f5 black tl b db mv3 pv2">  <img src="/assets/plus.png" alt="" id="plus-circle"> Co-Founder name </label>
+          <label for="coFounder-name" class="f5 black tl b db mv3 pv2">  <img src="/assets/plus.png" class="shadow-hover" id="plus-circle"> Co-Founder name </label>
           <input type="text" name="coFounder-name" class="input-reset bg-light-gray ba b--black-20 pa2 mb2 dn w-100 br2" id="coFounder-name">
 
           <label for="startup-name" class="f5 tl black b db mb2">Your startup's name* </label>
