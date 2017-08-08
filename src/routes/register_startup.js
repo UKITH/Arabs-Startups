@@ -15,8 +15,9 @@ module.exports = (req, res) => {
 
    startup.save((err) => {
     if (err) {
-      throw err;
+      res.render('not_found');
+    } else {
+      res.redirect('/')
     }
-    res.redirect('/')
   })
 }
