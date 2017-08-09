@@ -75,15 +75,6 @@ tape('Test for register startup route', (t) => {
   })
 })
 
-tape('Test the submit message page', (t) => {
-  let html = 'Thank you!'
-  supertest(server).get('/submitMessage').end((err, res) => {
-    t.error(err, 'No Error');
-    t.equal(res.text.includes(html), true, 'Should have the html');
-    t.end();
-  })
-})
-
 tape('Test for results', (t) => {
   supertest(server).get('/search?search=&sector=').end((err, res) => {
     t.error(err, 'No Error');
