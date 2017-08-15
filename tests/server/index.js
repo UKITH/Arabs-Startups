@@ -51,7 +51,7 @@ tape('Test profile page route', (t) => {
 
 
 tape('Test for register startup route', (t) => {
-  let htmlErr = 'Sorry we could not find what you are searching for'
+  let htmlErr = ' Sorry we could not find what you are searching for'
   let expected = {
     'startup-name': 'FAC',
     'founder-name': 'Dan',
@@ -68,12 +68,6 @@ tape('Test for register startup route', (t) => {
     mockCollection.find({startupName: 'FAC'}, (err, startup) => {
       t.ok(startup, 'The startup is in the database');
     })
-    mockCollection.find({startupName: 'FAC'}).remove((err) => {
-      if (err) {
-        return
-      }
-      console.log('Removed');
-    });
     t.error(err, 'No Error');
   })
 
@@ -81,6 +75,13 @@ tape('Test for register startup route', (t) => {
   .send(expected)
   .end((err, res) => {
     t.ok(res.text.includes(htmlErr), 'Since the startup already exists should give an error');
+
+    mockCollection.find({startupName: 'FAC'}).remove((err) => {
+      if (err) {
+        return
+      }
+      console.log('Removed');
+    });
     t.end();
   })
 })
@@ -194,6 +195,7 @@ tape('Test the latlng map helper', (t) => {
   let expectedFailedAddress = 'data-lat=32.7014255 data-lng=35.2967795';
   supertest(server).get('/event/5970af73b36db104139d3afd').end((err, res) => {
     t.ok(res.text.includes(expectedFailedAddress), 'returns default address when address not found');
+    db.close();
     t.end();
   })
 })
