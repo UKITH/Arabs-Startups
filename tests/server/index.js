@@ -56,7 +56,8 @@ tape('Test for register startup route', (t) => {
     Select: 'Software',
     'funding-stage': 'Seed-Funded',
     'startup-email': 'mario91sss@gmail.com',
-    'startup-website': 'foundersandcoders.com'
+    'startup-website': 'foundersandcoders.com',
+    'logo-url': 'https://arab-innovators.s3.amazonaws.com/FAC%20branding.png'
   }
   supertest(server).post('/registerStartup')
   .send(expected)
@@ -164,6 +165,14 @@ tape('Test Certain Event Page Functionality', (t) => {
     supertest(server).get('/event/5970aee1b36db104139d3af').end((err, res) => {
       t.equal(res.text.includes(htmlErr), true, 'Should get the 404 page');
       t.end();
+  })
+})
+
+tape('Test aws endpoint /sign-s3', (t) => {
+  const signedRequest = 'k.png';
+  supertest(server).get('/sign-s3?file-name=k.png&file-type=image/png').end((err, res) => {
+    t.ok(res.text.includes(signedRequest), 'Signed the right image to be sent to s3')
+    t.end()
   })
 })
 
