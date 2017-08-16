@@ -9,6 +9,7 @@ const startupSchema = mongoose.Schema({
   email: {type: String, required: true},
   fundingStage: {type: String, required: true},
   startupWebsite: {type: String, required: true },
+  logoUrl: {type: String, required: true}
 });
 
 const startupInfoTable = mongoose.model('startupInfoTable', startupSchema);

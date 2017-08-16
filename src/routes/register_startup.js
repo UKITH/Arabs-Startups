@@ -10,7 +10,8 @@ module.exports = (req, res) => {
     startupSector: req.body.Select,
     fundingStage: req.body['funding-stage'],
     email: req.body['startup-email'],
-    startupWebsite: req.body['startup-website']
+    startupWebsite: req.body['startup-website'],
+    logoUrl: req.body['logo-url']
   });
 
    startup.save((err) => {
