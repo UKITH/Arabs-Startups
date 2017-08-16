@@ -8,7 +8,6 @@ plusCircle.addEventListener('click', function () {
       input.setAttribute('id', 'coFounder-name');
       input.setAttribute('name', 'coFounder-name');
       coFounderInput.appendChild(input).classList.add('bg-light-gray','ba', 'b--black-20','pa2','mb2','w-100','br2','db');
-      console.log(childNumber);
 
     }
 })
