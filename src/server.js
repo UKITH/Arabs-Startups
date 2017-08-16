@@ -3,6 +3,7 @@ const hbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
+const compression = require('compression');
 const router = require('./routes/index.js');
 const DateToString = require('./helpers/date_to_string.js');
 const getMapLink = require('./helpers/get_map_link.js');
@@ -20,6 +21,7 @@ app.engine('hbs', hbs({
   }
 }));
 
+app.use(compression());
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
