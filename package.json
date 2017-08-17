@@ -28,7 +28,7 @@
     "tape": "^4.6.3"
   },
   "dependencies": {
-    "aws-sdk": "^2.99.0",
+    "aws-sdk": "^2.100.0",
     "body-parser": "^1.17.2",
     "compression": "^1.7.0",
     "env2": "^2.2.0",
