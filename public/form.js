@@ -7,7 +7,7 @@ plusCircle.addEventListener('click', function () {
       var newCoFounder = document.createElement('input');
       newCoFounder.setAttribute('id', 'coFounder-name');
       newCoFounder.setAttribute('name', 'coFounder-name');
-      coFounderInput.appendChild(newCoFounder).classList.add('bg-light-gray','ba', 'b--black-20','pa2','mb2','w-100','br2','db');
+      coFounderInput.appendChild(newCoFounder).classList.add('ba', 'b--black-20','pa2','mb2','w-100','br2','db');
 
     }
 })
