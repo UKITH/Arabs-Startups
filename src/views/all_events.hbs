@@ -5,7 +5,7 @@
       <tbody class="">
         {{#each upcomingEvents}}
         <th class="text-granite-gray fl pv3 tl f5">{{{DateToString this.eventDate}}}</th>
-        <tr class="lh-copy near-white">
+        <tr onclick="document.location = '/event/{{this._id}}'" class="lh-copy near-white shadow-hover">
           <td class="bg-events-purple w-20 pb4 br3 ph4 br--left  f4">{{this.eventTime}}</td>
           <td class="pa3 bg-events-purple w-60 br3 br--right tl f4">{{this.eventTitle}}<br>{{this.eventAddress}}</td>
           <td class="pa3 bg-white w-20">
@@ -19,7 +19,7 @@
       <tbody class="">
         {{#each pastEvents}}
         <th class="text-granite-gray fl pv3">{{{DateToString this.eventDate}}}</th>
-        <tr class="lh-copy text-granite-gray">
+        <tr onclick="document.location = '/event/{{this._id}}'" class="lh-copy text-granite-gray pointer:hover">
           <td class="bg-light-gray w-20 pb4 ph4 br2 br--left f4">{{this.eventTime}}</td>
           <td class="pa3 bg-light-gray w-60 br2 br--right f4">{{this.eventTitle}}<br>{{this.eventAddress}}</td>
         </tr>
