@@ -8,11 +8,11 @@ plusCircle.addEventListener('click', function () {
       newCoFounder.setAttribute('id', 'coFounder-name');
       newCoFounder.setAttribute('name', 'coFounder-name');
       newCoFounder.setAttribute('required', '');
-      coFounderInput.appendChild(newCoFounder).classList.add('ba', 'b--black-20','pa2','mb2','w-100','br2','db');
+      coFounderInput.appendChild(newCoFounder).classList.add('ba','b--black-20','pa2','mb2','w-90','br2','db','fl');
       var removeCoFounder = document.createElement('img');
       removeCoFounder.setAttribute('id', 'cross-circle');
       removeCoFounder.setAttribute('src', './assets/cross.png');
-      coFounderInput.appendChild(removeCoFounder).classList.add('w2', 'h2','fr');
+      coFounderInput.appendChild(removeCoFounder).classList.add('w-10', 'db', 'mb2');
     }
     removeCoFounder.addEventListener('click', function () {
       removeCoFounder.parentNode.removeChild(newCoFounder);
