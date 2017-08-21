@@ -18,6 +18,6 @@ module.exports = (req, res) => {
     if (err) {
       throw err;
     }
-    res.redirect('/')
+    res.redirect('/submitMessage')
   })
 }
