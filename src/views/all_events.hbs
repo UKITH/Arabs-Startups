@@ -19,7 +19,7 @@
       <tbody class="">
         {{#each pastEvents}}
         <th class="text-granite-gray fl pv3">{{{DateToString this.eventDate}}}</th>
-        <tr onclick="document.location = '/event/{{this._id}}'" class="lh-copy text-granite-gray pointer:hover">
+        <tr onclick="document.location = '/event/{{this._id}}'" class="lh-copy text-granite-gray shadow-hover">
           <td class="bg-light-gray w-20 pb4 ph4 br2 br--left f4">{{this.eventTime}}</td>
           <td class="pa3 bg-light-gray w-60 br2 br--right f4">{{this.eventTitle}}<br>{{this.eventAddress}}</td>
         </tr>
