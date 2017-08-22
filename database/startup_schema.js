@@ -8,7 +8,8 @@ const startupSchema = mongoose.Schema({
   startupSector: {type: String, required: true},
   email: {type: String, required: true},
   fundingStage: {type: String, required: true},
-  startupWebsite: {type: String, required: true },
+  startupWebsite: {type: String, required: true},
+  signUpReason: {type: String, required: true}
 });
 
 const startupInfoTable = mongoose.model('startupInfoTable', startupSchema);

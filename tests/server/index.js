@@ -56,7 +56,8 @@ tape('Test for register startup route', (t) => {
     Select: 'Software',
     'funding-stage': 'Seed-Funded',
     'startup-email': 'mario91sss@gmail.com',
-    'startup-website': 'foundersandcoders.com'
+    'startup-website': 'foundersandcoders.com',
+    'signup-reason': 'Other'
   }
   supertest(server).post('/registerStartup')
   .send(expected)
