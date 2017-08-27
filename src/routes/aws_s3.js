@@ -17,7 +17,6 @@ const s3Params = {
 
 s3.getSignedUrl('putObject', s3Params, (err, data) => {
   if(err){
-    console.log(err);
     return res.end();
   }
   const returnData = {

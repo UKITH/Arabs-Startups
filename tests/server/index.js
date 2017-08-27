@@ -57,7 +57,8 @@ tape('Test for register startup route', (t) => {
     'funding-stage': 'Seed-Funded',
     'startup-email': 'mario91sss@gmail.com',
     'startup-website': 'foundersandcoders.com',
-    'logo-url': 'https://arab-innovators.s3.amazonaws.com/FAC%20branding.png'
+    'logo-url': 'https://arab-innovators.s3.amazonaws.com/FAC%20branding.png',
+    'signup-reason': 'Other'
   }
   supertest(server).post('/registerStartup')
   .send(expected)
