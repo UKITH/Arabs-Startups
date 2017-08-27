@@ -5,8 +5,10 @@ module.exports = (req, res) => {
   mockCollection.findOne({_id:id}, (error, startup)=> {
     if(error) res.render('not_found');
     else {
+      const coFounders = startup.coFounderName.split(',')
       res.render('startup_profile', {
-          startup: startup,
+          startup,
+          coFounders
       })
     }
   })
