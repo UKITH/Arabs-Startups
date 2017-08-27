@@ -23,7 +23,7 @@
         </select><!--
       --><input class="bg-orange near-white br1 bn b h2 w-10" type="submit" value="search">
       <div class="w-50 center tl">
-        <p class="dib moon-gray mt1 w-60">Enter a keyword. and/or choose a sector</p><!--
+        <p class="dib moon-gray mt1 w-60">Enter a keyword. And/or choose a sector</p><!--
         --><nav class="moon-gray tl w-100"> Popular searches:
           <a class="moon-gray" href="/search?search=&sector=Cities">Cities,</a>
           <a class="moon-gray" href="/search?search=&sector=E-Commerce">E-Commerce,</a>
@@ -44,14 +44,14 @@
     </div>
 
     <div class="">
-      <h1 class="text-orange w-70 pr4 i f2">Who Are We ?</h1><!--
-    --><span class="text-granite-gray ml3 lh-copy">We connect Investors with pioneering Enterprenurs. We believe that diversity is key to innovation. </span>
+      <h1 class="text-orange w-70 pr4 i f2">Who Are We?</h1><!--
+    --><span class="text-granite-gray ml3 lh-copy">We connect Investors with pioneering Entrepreneurs. We believe that diversity is key to innovation. </span>
     </div>
 
     <div class="bg-granite-gray w-100 pb1">
-      <h1 class="text-orange f2 w-70 pr4 i pt1 pb0">Why Are We ?</h1>
+      <h1 class="text-orange f2 w-70 pr4 i pt1 pb0">Why Are We?</h1>
       <p class="near-white lh-copy mw7 dib pr4 ml6 mr4 mt0">
-        Israel is a startup nation. But its Arab community is severely under-represented in high tech. This is due to lack of dunding and visibility, as well as cultural stereoptypes.Fortunately, times are changing. There's a lot of talent to encourage out there.</p>
+        Israel is a startup nation. But its Arab community is severely underrepresented in high tech. This is due to a lack of funding and visibility, as well as cultural stereoptypes. Fortunately, times are changing. There's a lot of talent to encourage out there.</p>
     </div>
 
     <!-- Submission form -->
@@ -65,21 +65,22 @@
           <label for="founder-name" class="f5 tl b db mt2">Your full name* </label>
           <input type="text" name="founder-name" id="founder-name" class="input-reset bg-light-gray br2 ba b--black-20 pa2 mt2 db w-100" required>
 
-          <label for="coFounder-name" class="f5 black tl b db mv3 pv2">  <img src="/assets/plus.png" class="shadow-hover" id="plus-circle"> Co-Founder name </label>
-          <input type="text" name="coFounder-name" class="input-reset bg-light-gray ba b--black-20 pa2 mb2 dn w-100 br2" id="coFounder-name">
+          <div id="co-founder">
+            <label for="coFounder-name" class="f5 tl b db mv3 pv2 w-100">  <img src="/assets/plus.png" class="shadow-hover" id="plus-circle"> Co-Founder name </label>
+          </div>
 
-          <label for="startup-name" class="f5 tl black b db mb2">Your startup's name* </label>
+          <label for="startup-name" class="f5 tl fl b db mb2">Your startup's name* </label>
           <input type="text" name="startup-name" class="input-reset tl bg-light-gray ba b--black-20 pa2 mb2 db w-100 br2" id="startup-name" required>
 
-          <label for="startup-website" class="f5 tl b db black">Startup website* </label>
+          <label for="startup-website" class="f5 tl b db">Startup website* </label>
           <input type="text" name="startup-website" class="input-reset bg-light-gray ba b--black-20 pa2 mb2 db w-100 mt2 br2" id="startup-website" required>
 
-          <label for="startup-email" class="f5 tl b db mb2 black">Contact email* </label>
+          <label for="startup-email" class="f5 tl b db mb2">Contact email* </label>
           <input type="email" name="startup-email" class="input-reset bg-light-gray ba b--black-20 pa2 mb2 db w-100 br2" id="startup-email" required>
 
         </div><!--
         --><div class="dib ph5 tl b--transparent">
-          <label for="description" class="f5 b tl db mb2">Startup description (up tp 100 words)* </label>
+          <label for="description" class="f5 b tl db mb2">Startup description (up to 100 words)* </label>
           <textarea name="description" rows="12" cols="30" id="description" class="db border-box hover-black w-100 br2 br2 mb2 bg-light-gray"></textarea>
 
           <label for="select-sector" class="f5 b tl db mb2">Sector* </label>
@@ -105,6 +106,15 @@
             <option value="Seed-Funded">Seed Funded</option>
             <option value="Round-A">Round A</option>
             <option value="Bootstrap">Bootstrap</option>
+          </select>
+
+          <label for="signup-reason" class="f5 b tl db mb2">Reason for signing up* </label>
+          <select id="signup-reason" name="signup-reason" class="mb2 pa2 w-100 bg-light-gray br2" required="">
+            <option value=""></option>
+            <option value="Investment">Investment</option>
+            <option value="Hire-someone">Hire someone</option>
+            <option value="Find-client">Find clients</option>
+            <option value="Other">Other</option>
           </select>
 
           <input type="submit" name="submit" class="f6 br2 w-100 pv2 mb2 dib white bg-our-orange" value="Submit">

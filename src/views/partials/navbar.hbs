@@ -1,16 +1,28 @@
-<nav class="dt w-100 bg-navbar center" id="navbar">
-  <div class="dtc w2 v-mid  ">
-      <a class="f1  b no-underline dark-gray mh3" href="/">Ain</a>
+<nav class="w-100 bg-navbar" id="navbar">
+  <a class="f1 dib b no-underline dark-gray ma2 pr2 fl" href="/">Ain</a>
+  <div class="dib-l dn ma3 pv1">
+      <form class="dib" action="/search" method="get">
+        <input type="text" name="search" placeholder="my search" class="br2 ba b--black bg-near-gray pa2 dib">
+        <input type="submit" name="Submit" value="Search" class="pa2 ph3 br2 ba bg-white">
+      </form>
   </div>
-  <div class="dtc v-mid tr" id="navs">
-    <a class="f4 fw4 hover-orange no-underline black pv2 ph3" href="/">about</a>
-    <a class="f4 fw4 hover-orange no-underline black pv2 ph3" href="/allNews">news</a>
-    <a class="f4 fw4 hover-orange no-underline black pv2 ph3" href="/allEvents">events</a>
-    <a class="f4 fw4 hover-near-orange no-underline text-orange pv2 ph3" href="/#apply">join us</a>
-    <a class="f4 fw4 hover-near-black no-underline black pv2 ph3" href="/search?search=&sector=">startups</a>
+  <div class="fr dib-l dn ma3 pv1" id="navs">
+    <a class="f4 hover-orange no-underline black ma3" href="/">about</a>
+    <a class="f4 hover-orange no-underline black ma3" href="/allNews">news</a>
+    <a class="f4 hover-orange no-underline black ma3" href="/allEvents">events</a>
+    <a class="f4 hover-near-orange no-underline text-orange ma3" href="/#apply">join us</a>
+    <a class="f4 hover-near-black no-underline black ma3" href="/search?search=&sector=">startups</a>
   </div>
 
-  <div class="dn fa fa-bars fa-3x black fr mh-4" id="burger">
-
+  <div class="dn-l db-m fr mv2 mh3" id="burger">
+    <div class="fa fa-bars fa-3x black"></div>
+      <div class="dn" id="nav-list">
+        <a class="f4 hover-orange no-underline black mv3" href="/">about</a><br>
+        <a class="f4 hover-orange no-underline black mv3" href="/allNews">news</a><br>
+        <a class="f4 hover-orange no-underline black mv3" href="/allEvents">events</a><br>
+        <a class="f4 hover-near-orange no-underline text-orange mv3" href="/#apply">join us</a><br>
+        <a class="f4 hover-near-black no-underline black mv3" href="/search?search=&sector=">startups</a>
+      </div>
   </div>
+
 </nav>
