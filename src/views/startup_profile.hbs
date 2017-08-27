@@ -1,20 +1,25 @@
-<div class="">
-  <div class="">
-    <h2 class="">{{startup.startupName}}</h2>
-    <span class=""> , {{startup.fundingStage}}</span>
-    <span class="">{{startup.startupSector}}</span>
+<div class="w-80 mv4 center">
+  <div class="w-100">
+    <h2 class="fl-l f1 mh5-l">{{startup.startupName}}</h2>
+    <div class="fr-l mv5-l mh5-l mv3">
+      <span class="f2">{{startup.startupSector}}, </span>
+      <span class="f2">{{startup.fundingStage}}</span>
+    </div>
   </div>
-  <div class="">
-    <img class="" src="/assets/fac.png" alt="">
-    <p class="">{{startup.startupDescription}}</p>
+  <div class=" dib">
+    <img class="h5 w5 fl" src="/assets/fac.png" alt="">
+    <p class="w-70-l mv4 dib f4">{{startup.startupDescription}}</p>
   </div>
-  <div class="">
-    <span><a class="" href={{startup.startupWebsite}}><img src="/assets/link.png">{{startup.startupWebsite}}</a></span>
-    <p class=""><img src="/assets/mail.png">  {{startup.email}}</p>
-    <br>
-    <span class="">Founder: {{startup.founderName}}</span>
-      {{#each coFounders}}
-        <span class="">Co-Founder: {{this}}</span>
-      {{/each}}
+  <div class="mv4">
+    <div class="fl">
+      <span><a class="f3" href={{startup.startupWebsite}}><img src="/assets/link.png">{{startup.startupWebsite}}</a></span>
+      <p class="f3"><img src="/assets/mail.png">  {{startup.email}}</p>
+    </div>
+    <div class="dib fr">
+      <span class="f3 pr4 pv4">Founder: {{startup.founderName}}</span>
+        {{#each coFounders}}
+          <span class="f3 db">Co-Founder: {{this}}</span>
+        {{/each}}
+    </div>
   </div>
 </div>
