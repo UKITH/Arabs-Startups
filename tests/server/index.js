@@ -33,11 +33,12 @@ tape('Test home route', (t) => {
 });
 
 tape('Test profile page route', (t) => {
-  let html = '<h2 class="f1 absolute pt2">MyCity</h2>\n';
+  let html = '<h2 class="fl-l f1 mh5-l near-black">MyCity</h2>';
   let html2 = 'Sorry we could not find what you are searching for'
   supertest(server).get('/startupProfile/595cbfe08d75e77913c05c0e').end((err, res) => {
     t.error(err, 'No Error');
     t.equal(res.status, 200, 'Should equal 200');
+    console.log(res.text);
     t.equal(res.text.includes(html), true, 'The right startup was found');
   })
   supertest(server).get('/startupProfile/sdgadfasd').end((err, res) => {
@@ -49,7 +50,7 @@ tape('Test profile page route', (t) => {
 
 tape('Test for register startup route', (t) => {
   let expected = {
-    'startup-name': 'FAC',
+    'startup-name': 'FACN1',
     'founder-name': 'Dan',
     'coFounder-name': '',
     'description': 'Coding bootcamp for everyone',
@@ -62,10 +63,10 @@ tape('Test for register startup route', (t) => {
   supertest(server).post('/registerStartup')
   .send(expected)
   .end((err, res) => {
-    mockCollection.find({startupName: 'FAC'}, (err, startup) => {
+    mockCollection.find({startupName: 'FACN1'}, (err, startup) => {
       t.ok(startup, 'The startup is in the database');
     })
-    mockCollection.find({startupName: 'FAC'}).remove((err) => {
+    mockCollection.find({startupName: 'FACN1'}).remove((err) => {
       if (err) {
         return
       }
