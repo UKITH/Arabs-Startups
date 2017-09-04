@@ -128,7 +128,7 @@ tape('Test for results', (t) => {
 })
 
 tape('Testing all events functionality page', (t) => {
-  let html = 'FACN3'
+  let html = ''
   supertest(server).get('/allEvents').end((err, res) => {
     t.error(err, 'No Error');
     t.ok(res.text.includes(html), 'Finds all the events');
