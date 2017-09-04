@@ -1,8 +1,8 @@
-const { mockEvents } = require('../../database/events_schema.js');
+const { events } = require('../../database/events_schema.js');
 const latLng = require('../helpers/latlng.js');
 
 const getEvent = (id, hbs, res) => {
-  mockEvents.findOne({_id:id}, (error, event)=> {
+  events.findOne({_id:id}, (error, event)=> {
     if(error) res.render('not_found');
     else {
       latLng(event.eventAddress, (err, coords) => {
