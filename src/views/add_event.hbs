@@ -1,0 +1,26 @@
+<div class="">
+  <form action="/insertEvent" method="post">
+      <input type="text" name="title" class="pa2 bg-light-gray">
+
+      <label for="day-input" class="">Day:</label>
+      <input type="number" name="day" min="1" max="31" value="1" class="bg-light-gray" id="day-input">
+
+      <label for="month-input" class="">Month:</label>
+      <input type="number" name="month" min="1" max="12" value="1" class="bg-light-gray" id="month-input">
+
+      <label for="year-input" class="">Year:</label>
+      <input type="number" name="year" min="2017" max="2025" value="2017" class="bg-light-gray" id="year-input">
+
+      <label for="time-input" class="">Time:</label>
+      <input type="number" name="hour" value="00" min="0" max="23" class="bg-light-gray" id="time-input">:<input type="number" name="minute" value="00" min="0" max="59" class="bg-light-gray">
+
+      <label for="description-area" class="">Description:</label>
+      <textarea name="description" rows="10" cols="40" class="bg-light-gray" id="description-area" placeholder="What is it?"></textarea>
+
+      <label for="">Organiser:</label>
+      <input type="text" name="organiser" placeholder="Who is organising?" class="bg-light-gray pa2">
+
+      <label for="address-input">Adress:</label>
+      <input type="text" name="address" placeholder="Where is it ?" class="pa2 bg-light-gray" id="address-input">
+  </form>
+</div>
