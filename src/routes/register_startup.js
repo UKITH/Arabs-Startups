@@ -15,9 +15,8 @@ module.exports = (req, res) => {
   });
 
    startup.save((err) => {
-    if (err) {
-      throw err;
-    }
+    if (err) return err;
+    
     res.redirect('/submitMessage')
   })
 }
