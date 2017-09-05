@@ -4,10 +4,13 @@ const supertest = require('supertest');
 const exphbs = require('express-handlebars');
 require('env2')('./config.env');
 
-
+// helpers that are being tested
 const DateToString = require('../../src/helpers/date_to_string.js');
 const getMapLink = require('../../src/helpers/get_map_link.js');
 const latLng = require('../../src/helpers/latlng.js');
+
+// actions being tested
+const findAllStartups = require('../../src/actions/find_all_startups.js');
 
 mongoose.connect(process.env.DB_URL, {
   useMongoClient: true
@@ -48,6 +51,7 @@ tape('Test profile page route', (t) => {
 
 
 tape('Test for register startup route', (t) => {
+  let htmlErr = ' Sorry we could not find what you are searching for'
   let expected = {
     'startup-name': 'FAC',
     'founder-name': 'Dan',
@@ -65,13 +69,20 @@ tape('Test for register startup route', (t) => {
     mockCollection.find({startupName: 'FAC'}, (err, startup) => {
       t.ok(startup, 'The startup is in the database');
     })
+    t.error(err, 'No Error');
+  })
+
+  supertest(server).post('/registerStartup')
+  .send(expected)
+  .end((err, res) => {
+    t.ok(res.text.includes(htmlErr), 'Since the startup already exists should give an error');
+
     mockCollection.find({startupName: 'FAC'}).remove((err) => {
       if (err) {
         return
       }
       console.log('Removed');
     });
-    t.error(err, 'No Error');
     t.end();
   })
 })
@@ -185,7 +196,7 @@ tape('Test the latlng map helper', (t) => {
   let expectedFailedAddress = 'data-lat=32.7014255 data-lng=35.2967795';
   supertest(server).get('/event/5970af73b36db104139d3afd').end((err, res) => {
     t.ok(res.text.includes(expectedFailedAddress), 'returns default address when address not found');
-    t.end();
     db.close();
+    t.end();
   })
 })
