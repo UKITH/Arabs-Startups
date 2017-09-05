@@ -184,6 +184,7 @@ tape('Test the date helper function', (t) => {
   t.end();
 })
 
+
 tape('Test the map link helper', (t) => {
   let expectedLink = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API}&callback=myMap`
   t.equal(getMapLink(), expectedLink, 'returns the right link');
