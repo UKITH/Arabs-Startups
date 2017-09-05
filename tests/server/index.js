@@ -14,6 +14,7 @@ mongoose.connect(process.env.DB_URL, {
 });
 
 const { mockCollection } = require('../../database/startup_schema.js');
+const { events } = require('../../database/events_schema.js');
 const server = require('../../src/server.js');
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -156,9 +157,9 @@ tape('Test news section page', (t) => {
 })
 
 tape('Test Certain Event Page Functionality', (t) => {
-  let html = 'FACN3'
+  let html = ''
   let htmlErr = 'Sorry we could not find what you are searching for';
-  supertest(server).get('/event/5970aee1b36db104139d3af9').end((err, res) => {
+  supertest(server).get('/event/59ad5a758b870b283c8a07ae').end((err, res) => {
     t.error(err, 'No Error');
     t.equal(res.text.includes(html), true, 'Should recieve the right event');
     })
@@ -183,9 +184,43 @@ tape('Test the map link helper', (t) => {
 
 tape('Test the latlng map helper', (t) => {
   let expectedFailedAddress = 'data-lat=32.7014255 data-lng=35.2967795';
-  supertest(server).get('/event/5970af73b36db104139d3afd').end((err, res) => {
+  supertest(server).get('/event/59ad5a758b870b283c8a07ae').end((err, res) => {
     t.ok(res.text.includes(expectedFailedAddress), 'returns default address when address not found');
     t.end();
-    db.close();
+  })
+})
+
+tape('Test saving an event into the database', (t) => {
+  const data = {
+    title: 'event',
+    day: '2',
+    month: '12',
+    year: '2017',
+    hour: '23',
+    minute: '12',
+    description: 'This is just a test event',
+    organiser: 'Mario',
+    address: 'baker street',
+  }
+
+  supertest(server).post('/insertEvent').send(data).end((err, res) => {
+    t.error(err, 'No Error')
+  events.find({title: 'event'}).remove((err) => {
+    if (err) {
+      return
+    }
+    console.log('Removed');
+    t.end();
+  })
+  db.close();
+})
+})
+
+tape('Test the event form route', (t) => {
+  let html = '<form action="/insertEvent" method="post">'
+  supertest(server).get('/addEvent').end((err, res) => {
+    t.error(err, 'No Error');
+    t.ok(res.text.includes(html), 'renders the form')
+    t.end();
   })
 })
