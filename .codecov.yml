@@ -2,3 +2,7 @@ coverage:
   range: 97..99
   round: down
   precision: 2
+  status:
+    project:
+      default:
+        threshold: 1%
