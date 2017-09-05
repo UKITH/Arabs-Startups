@@ -34,6 +34,7 @@
     "express-handlebars": "^3.0.0",
     "mongodb": "^2.2.29",
     "mongoose": "^4.11.0",
+    "mongoose-simple-random": "^0.4.1",
     "nodemon": "^1.11.0",
     "request": "^2.81.0"
   }
