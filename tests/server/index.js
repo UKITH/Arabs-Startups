@@ -76,15 +76,18 @@ tape('Test for register startup route', (t) => {
   .send(expected)
   .end((err, res) => {
     t.ok(res.text.includes(htmlErr), 'Since the startup already exists should give an error');
+    remove()
+  })
 
+    const remove = () => {
     mockCollection.find({startupName: 'FAC'}).remove((err) => {
       if (err) {
         return
       }
       console.log('Removed');
     });
+  }
     t.end();
-  })
 })
 
 tape('Test the submit message page', (t) => {
