@@ -53,8 +53,9 @@ tape('Test profile page route', (t) => {
 
 
 tape('Test for register startup route', (t) => {
+  let htmlErr = ' Sorry we could not find what you are searching for'
   let expected = {
-    'startup-name': 'FACN1',
+    'startup-name': 'FAC',
     'founder-name': 'Dan',
     'coFounder-name': '',
     'description': 'Coding bootcamp for everyone',
@@ -67,18 +68,28 @@ tape('Test for register startup route', (t) => {
   supertest(server).post('/registerStartup')
   .send(expected)
   .end((err, res) => {
-    mockCollection.find({startupName: 'FACN1'}, (err, startup) => {
+    mockCollection.find({startupName: 'FAC'}, (err, startup) => {
       t.ok(startup, 'The startup is in the database');
     })
-    mockCollection.find({startupName: 'FACN1'}).remove((err) => {
+    t.error(err, 'No Error');
+  })
+
+  supertest(server).post('/registerStartup')
+  .send(expected)
+  .end((err, res) => {
+    t.ok(res.text.includes(htmlErr), 'Since the startup already exists should give an error');
+    remove()
+  })
+
+    const remove = () => {
+    mockCollection.find({startupName: 'FAC'}).remove((err) => {
       if (err) {
         return
       }
       console.log('Removed');
     });
-    t.error(err, 'No Error');
+  }
     t.end();
-  })
 })
 
 tape('Test the submit message page', (t) => {
