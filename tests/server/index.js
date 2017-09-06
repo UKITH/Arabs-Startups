@@ -85,6 +85,16 @@ tape('Test the submit message page', (t) => {
   })
 })
 
+tape('Test for random startups page', (t) => {
+  supertest(server).get('/randomStartups').end((err,res) => {
+    t.error(err, 'No Error');
+    var testedClass = '<div class="dib mh1 tc">';
+    var count = (res.text.match(/<div class="dib mh1 tc">/g) || []).length;
+    t.ok(res.text.includes(testedClass), 'should have this class at least 1');
+    t.equal(count, 10, 'should have only 10 startups');
+    t.end();
+  })
+})
 tape('Test for results', (t) => {
   supertest(server).get('/search?search=&sector=').end((err, res) => {
     t.error(err, 'No Error');
