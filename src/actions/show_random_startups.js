@@ -1,5 +1,4 @@
 const { mockCollection } = require('../../database/startup_schema.js');
-const random = require('mongoose-simple-random');
 
 const showRandomStartups = (hbs, response) => {
   let limitResults = { limit: 10 };
