@@ -7,7 +7,7 @@ require('env2')('./config.env');
 // helpers that are being tested
 const DateToString = require('../../src/helpers/date_to_string.js');
 const getMapLink = require('../../src/helpers/get_map_link.js');
-const latLng = require('../../src/helpers/latlng.js');
+let latLng = require('../../src/helpers/latlng.js');
 
 // actions being tested
 const findAllStartups = require('../../src/actions/find_all_startups.js');
@@ -17,6 +17,8 @@ mongoose.connect(process.env.DB_URL, {
 });
 
 const { mockCollection } = require('../../database/startup_schema.js');
+const { mockEvents } = require('../../database/events_schema.js');
+const { mockNews } = require('../../database/news_schema.js');
 const server = require('../../src/server.js');
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -58,6 +60,7 @@ tape('Test for register startup route', (t) => {
     'coFounder-name': '',
     'description': 'Coding bootcamp for everyone',
     Select: 'Software',
+    'logo-url': 'https://arab-innovators.s3.amazonaws.com/2.png',
     'funding-stage': 'Seed-Funded',
     'startup-email': 'mario91sss@gmail.com',
     'startup-website': 'foundersandcoders.com',
@@ -76,18 +79,14 @@ tape('Test for register startup route', (t) => {
   .send(expected)
   .end((err, res) => {
     t.ok(res.text.includes(htmlErr), 'Since the startup already exists should give an error');
-    remove()
-  })
-
-    const remove = () => {
     mockCollection.find({startupName: 'FAC'}).remove((err) => {
       if (err) {
         return
       }
       console.log('Removed');
+      t.end();
     });
-  }
-    t.end();
+  })
 })
 
 tape('Test the submit message page', (t) => {
@@ -146,7 +145,7 @@ tape('Testing all events functionality page', (t) => {
   supertest(server).get('/allEvents').end((err, res) => {
     t.error(err, 'No Error');
     t.ok(res.text.includes(html), 'Finds all the events');
-    t.end();
+    t.end()
   })
  })
 
@@ -208,7 +207,78 @@ tape('Test the latlng map helper', (t) => {
   let expectedFailedAddress = 'data-lat=32.7014255 data-lng=35.2967795';
   supertest(server).get('/event/5970af73b36db104139d3afd').end((err, res) => {
     t.ok(res.text.includes(expectedFailedAddress), 'returns default address when address not found');
-    db.close();
     t.end();
+  })
+})
+
+tape('Test if find_all_startups errors', t => {
+  const original = mockCollection.find;
+  let htmlErr = ' Sorry we could not find what you are searching for';
+  mockCollection.find = (options, callback) => {
+    process.nextTick(callback, new Error('hushs'))
+  }
+  supertest(server).get('/search?search=&sector=').end((err, res) => {
+    t.error(err, 'No Error')
+    t.ok(res.text.includes(htmlErr))
+    mockCollection.find = original;
+    t.end()
+  })
+})
+
+tape('Test if get_all_event action errors', t => {
+  const original = mockEvents.find;
+  let htmlErr = ' Sorry we could not find what you are searching for';
+  mockEvents.find = (options, callback) => {
+    process.nextTick(callback, new Error('hushs'))
+  }
+  supertest(server).get('/allEvents').end((err, res) => {
+    t.error(err, 'No Error');
+    t.ok(res.text.includes(htmlErr))
+    mockEvents.find = original
+    t.end();
+  })
+})
+
+tape('Test if get_all_news action errors', t => {
+  const original = mockNews.find;
+  let htmlErr = ' Sorry we could not find what you are searching for';
+  mockNews.find = (callback) => {
+    process.nextTick(callback, new Error('hushs'))
+  }
+  supertest(server).get('/allNews').end((err, res) => {
+    t.error(err, 'No Error');
+    t.ok(res.text.includes(htmlErr))
+    mockNews.find = original
+    t.end();
+  })
+})
+
+// tape('Test if get_event action errors', t => {
+//   const original = latLng;
+//   let htmlErr = ' Sorry we could not find what you are searching for';
+//   latLng = (address, callback) => {
+//     callback(new Error('hushs'))
+//   }
+//   supertest(server).get('/event/5970af73b36db104139d3afc').end((err, res) => {
+//     t.error(err, 'No Error');
+//     console.log(res.text);
+//     // t.ok(res.text.includes(htmlErr))
+//     latLng = original
+//     t.end()
+//   })
+// })
+
+tape('Test if get_news action errors', t => {
+  const original = mockNews.findOne;
+  let htmlErr = ' Sorry we could not find what you are searching for';
+  mockNews.findOne = (options, callback) => {
+    process.nextTick(callback, new Error('hushs'))
+  }
+  supertest(server).get('/news/5970cde547379a103492134b').end((err, res) => {
+    t.error(err, 'No Error');
+    t.ok(res.text.includes(htmlErr))
+    mockNews.findOne = original
+    t.end();
+    db.close()
   })
 })
