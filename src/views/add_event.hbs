@@ -1,0 +1,29 @@
+<div>
+  <form action="/insertEvent" method="post">
+      <label for="title-event">Title:</label>
+      <input type="text" name="title" class="pa2 bg-light-gray" placeholder="Name of the event?" id="title-event" required>
+
+      <label for="day-input">Day:</label>
+      <input type="number" name="day" min="1" max="31" value="1" class="bg-light-gray" id="day-input" required>
+
+      <label for="month-input">Month:</label>
+      <input type="number" name="month" min="1" max="12" value="1" class="bg-light-gray" id="month-input" required>
+
+      <label for="year-input">Year:</label>
+      <input type="number" name="year" min="2017" max="2025" value="2017" class="bg-light-gray" id="year-input" required>
+
+      <label for="time-input">Time:</label>
+      <input type="number" name="hour" placeholder="hh" min="0" max="23" class="bg-light-gray" id="time-input">:<input type="number" name="minute" placeholder="mm" min="0" max="59" class="bg-light-gray" required>
+
+      <label for="description-area">Description:</label>
+      <textarea name="description" rows="10" cols="40" class="bg-light-gray" id="description-area" placeholder="What is it?" required></textarea>
+
+      <label for="organiser">Organiser:</label>
+      <input type="text" name="organiser" placeholder="Who is organising?" class="bg-light-gray pa2" id="organiser" required>
+
+      <label for="address-input">Adress:</label>
+      <input type="text" name="address" placeholder="Where is it ?" class="pa2 bg-light-gray" id="address-input" required>
+
+      <input type="submit" name="" value="Submit" class="pa2">
+  </form>
+</div>

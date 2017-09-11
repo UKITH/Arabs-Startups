@@ -1,5 +1,5 @@
 const DateToString = (date) => {
-  return date.toDateString();
+  return new Date(date).toDateString();
 }
 
 module.exports = DateToString;

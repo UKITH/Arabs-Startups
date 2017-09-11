@@ -15,10 +15,7 @@ module.exports = (req, res) => {
   });
 
    startup.save((err) => {
-    if (err) {
-      res.render('not_found');
-    } else {
-      res.redirect('/submitMessage')
-    }
+    if (err) res.render('not_found');
+    else res.redirect('/submitMessage')
   })
 }

@@ -9,6 +9,8 @@ const allEvents = require('./all_events.js');
 const newsHandler = require('./news.js');
 const allNews = require('./all_news.js');
 const event = require('./event.js');
+const addEvent = require('./add_event.js');
+const saveEvent = require('./save_event.js');
 
 router.get('/', searchHome);
 router.post('/registerStartup', registerStartup);
@@ -19,5 +21,7 @@ router.get('/allEvents', allEvents);
 router.get('/news/:id', newsHandler);
 router.get('/allNews', allNews);
 router.get('/event/:id', event);
+router.get('/addEvent', addEvent);
+router.post('/insertEvent', saveEvent);
 
 module.exports = router;
