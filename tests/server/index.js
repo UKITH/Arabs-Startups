@@ -12,6 +12,7 @@ let latLng = require('../../src/helpers/latlng.js');
 // actions being tested
 const findAllStartups = require('../../src/actions/find_all_startups.js');
 
+
 mongoose.connect(process.env.DB_URL, {
   useMongoClient: true
 });
