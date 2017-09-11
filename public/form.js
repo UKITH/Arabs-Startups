@@ -1,5 +1,7 @@
 var plusCircle = document.querySelector('#plus-circle');
 var coFounderInput = document.querySelector('#co-founder');
+var signupReason = document.querySelector('#signup-reason');
+var otherReason = document.querySelector('#other');
 var childNumber = 0;
 plusCircle.addEventListener('click', function () {
   var childNumber = document.getElementById('co-founder').childElementCount;
@@ -18,6 +20,13 @@ plusCircle.addEventListener('click', function () {
       removeCoFounder.parentNode.removeChild(newCoFounder);
       removeCoFounder.parentNode.removeChild(removeCoFounder);
     })
+})
+
+signupReason.addEventListener('change', function(value) {
+  if(value='Other') {
+    otherReason.classList.toggle('dn');
+    otherReason.classList.toggle('db');
+  }
 })
 
 var bgChangeColor = document.querySelector('#navbar');
