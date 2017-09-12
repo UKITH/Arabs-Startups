@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const tape = require('tape');
 const supertest = require('supertest');
 const exphbs = require('express-handlebars');
+let request = require('request');
 require('env2')('./config.env');
 
 // helpers that are being tested
@@ -254,20 +255,6 @@ tape('Test if get_all_news action errors', t => {
   })
 })
 
-// tape('Test if get_event action errors', t => {
-//   const original = latLng;
-//   let htmlErr = ' Sorry we could not find what you are searching for';
-//   latLng = (address, callback) => {
-//     callback(new Error('hushs'))
-//   }
-//   supertest(server).get('/event/5970af73b36db104139d3afc').end((err, res) => {
-//     t.error(err, 'No Error');
-//     console.log(res.text);
-//     // t.ok(res.text.includes(htmlErr))
-//     latLng = original
-//     t.end()
-//   })
-// })
 
 tape('Test if get_news action errors', t => {
   const original = mockNews.findOne;
@@ -280,6 +267,20 @@ tape('Test if get_news action errors', t => {
     t.ok(res.text.includes(htmlErr))
     mockNews.findOne = original
     t.end();
+  })
+})
+
+tape('Test if get_event action errors', t => {
+  const original = request.get;
+  let htmlErr = ' Sorry we could not find what you are searching for';
+  request.get = (url, callback) => {
+    process.nextTick(callback, new Error('hushs'))
+  }
+  supertest(server).get('/event/5970aee1b36db104139d3af9').end((err, res) => {
+    t.error(err, 'No Error');
+    t.ok(res.text.includes(htmlErr))
+    request.get = original
+    t.end()
     db.close()
   })
 })
