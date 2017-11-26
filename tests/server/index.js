@@ -102,8 +102,8 @@ tape('Test for register startup route', (t) => {
         return
       }
       console.log('Removed');
+      t.end();
     });
-    t.end();
   }
 })
 
