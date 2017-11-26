@@ -73,6 +73,18 @@ tape('Test for register startup route', (t) => {
   .end((err, res) => {
     mockCollection.find({startupName: 'FAC'}, (err, startup) => {
       t.ok(startup, 'The startup is in the database');
+      supertest(server).post('/registerStartup')
+      .send(expected)
+      .end((err, res) => {
+        t.ok(res.text.includes(htmlErr), 'Since the startup already exists should give an error');
+
+        mockCollection.find({startupName: 'FAC'}).remove((err) => {
+          if (err) {
+            return
+          }
+          console.log('Removed');
+        });
+      })
     })
     t.error(err, 'No Error');
   })
@@ -100,6 +112,16 @@ tape('Test the submit message page', (t) => {
   })
 })
 
+tape('Test for random startups page', (t) => {
+  supertest(server).get('/randomStartups').end((err,res) => {
+    t.error(err, 'No Error');
+    const testedClass = '<div class="dib mh1 tc">';
+    const count = (res.text.match(/<div class="dib mh1 tc">/g) || []).length;
+    t.ok(res.text.includes(testedClass), 'should have this class at least 1');
+    t.equal(count, 10, 'should have only 10 startups');
+    t.end();
+  })
+})
 tape('Test for results', (t) => {
   supertest(server).get('/search?search=&sector=').end((err, res) => {
     t.error(err, 'No Error');

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const random = require('mongoose-simple-random');
 
 const startupSchema = mongoose.Schema({
   founderName: {type: String, required: true},
@@ -12,6 +13,7 @@ const startupSchema = mongoose.Schema({
   logoUrl: {type: String, required: true},
   signUpReason: {type: String, required: true}
 });
+startupSchema.plugin(random);
 
 const startupInfoTable = mongoose.model('startupInfoTable', startupSchema);
 
