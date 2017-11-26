@@ -1,22 +1,25 @@
-<div class="w-60 ml7 absolute vh-75 top-2">
-  <div class="w-100 h3">
-    <h2 class="f1 absolute pt2">{{startup.startupName}}</h2>
-    <span class="f3 fr pt5 mr4"> , {{startup.fundingStage}}</span>
-    <span class="f3 fr pt5">{{startup.startupSector}}</span>
+<div class="w-80 mv4 center">
+  <div class="w-100">
+    <h2 class="fl-l f1 mh5-l near-black">{{startup.startupName}}</h2>
+    <div class="fr-l mv5-l mh5-l mv3">
+      <span class="f2 near-black">{{startup.startupSector}}, </span>
+      <span class="f2 near-black">{{startup.fundingStage}}</span>
+    </div>
   </div>
-  <div class=" w-80 h5 absolute mt5">
-    <img class="h-75 pt4" src="/assets/fac.png" alt="">
-    <p class="gray w-80 f4 h1 dib absolute ml5 mt4">{{startup.startupDescription}}</p>
+  <div class=" dib w-100">
+    <img class="h5 w5 fl" src="/assets/fac.png" alt="">
+    <p class="w-70-l mv4 dib f4 text-granite-gray">{{startup.startupDescription}}</p>
   </div>
-  <div class="w-100 h3 bottom-0 h3 mb3 absolute ">
-    <span><a class="gray db f4" href={{startup.startupWebsite}}><img src="/assets/link.png">  {{startup.startupWebsite}}</a></span>
-    <p class="gray db f4"><img src="/assets/mail.png">  {{startup.email}}</p>
-    <br>
-    {{#if startup.coFounderName}}
-      <span class="gray absolute right-2 top-0 pt2 ph4 f4">  Co-Founder: {{startup.founderName}}</span>
-      <span class="gray absolute right-1 ph5 pv4 mr2  top-1 f4">Co-Founder: {{startup.coFounderName}}</span>
-    {{else}}
-        <span class="gray absolute right-2 top-0 pt2 ph5 f4">  Founder: {{startup.founderName}}</span>
-    {{/if}}
+  <div class="mv4">
+    <div class="fl">
+      <span><a class="f3 no-underline text-granite-gray" href={{startup.startupWebsite}}><img src="/assets/link.png">{{startup.startupWebsite}}</a></span>
+      <p class="f3 text-granite-gray"><img src="/assets/mail.png">  {{startup.email}}</p>
+    </div>
+    <div class="dib fr">
+      <span class="f3 pr4 pv4 text-granite-gray">Founder: {{startup.founderName}}</span>
+        {{#each coFounders}}
+          <span class="f3 db text-granite-gray">Co-Founder: {{this}}</span>
+        {{/each}}
+    </div>
   </div>
 </div>

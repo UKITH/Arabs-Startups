@@ -36,12 +36,17 @@ tape('Test home route', (t) => {
 });
 
 tape('Test profile page route', (t) => {
-  let html = '<h2 class="f1 absolute pt2">MyCity</h2>\n';
-  let html2 = 'Sorry we could not find what you are searching for'
+  let html = '<h2 class="fl-l f1 mh5-l near-black">MyCity</h2>';
+  let html2 = 'Sorry we could not find what you are searching for';
+  let coFounderHtml = '<span class="f3 db text-granite-gray">Co-Founder: Salim Mutabe&#x27;a</span>';
   supertest(server).get('/startupProfile/595cbfe08d75e77913c05c0e').end((err, res) => {
     t.error(err, 'No Error');
     t.equal(res.status, 200, 'Should equal 200');
     t.equal(res.text.includes(html), true, 'The right startup was found');
+  })
+  supertest(server).get('/startupProfile/59653b30c77e5c5701706021').end((err, res) => {
+    t.equal(res.status, 200, 'Should equal 200');
+    t.ok(res.text.includes(coFounderHtml), 'Should have multiple co founders')
   })
   supertest(server).get('/startupProfile/sdgadfasd').end((err, res) => {
     t.equal(res.text.includes(html2), true, 'Recieved 404 page');
@@ -79,12 +84,27 @@ tape('Test for register startup route', (t) => {
           }
           console.log('Removed');
         });
-        t.end();
       })
     })
     t.error(err, 'No Error');
   })
 
+  supertest(server).post('/registerStartup')
+  .send(expected)
+  .end((err, res) => {
+    t.ok(res.text.includes(htmlErr), 'Since the startup already exists should give an error');
+    remove()
+  })
+
+    const remove = () => {
+    mockCollection.find({startupName: 'FAC'}).remove((err) => {
+      if (err) {
+        return
+      }
+      console.log('Removed');
+      t.end();
+    });
+  }
 })
 
 tape('Test the submit message page', (t) => {
