@@ -84,7 +84,6 @@ tape('Test for register startup route', (t) => {
           }
           console.log('Removed');
         });
-        t.end();
       })
     })
     t.error(err, 'No Error');
