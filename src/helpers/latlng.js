@@ -9,13 +9,15 @@ const getLatLng = (address, cb) => {
     key: process.env.GOOGLE_API
   })
   const requestURI = baseURI + queryParams
-  request(requestURI, (err, res, body) => {
+  request.get(requestURI, (err, res, body) => {
     if (err) cb(err)
-    const location = JSON.parse(body).results[0]
-    if (location) {
-      cb(null, JSON.parse(body).results[0].geometry.location)
-    } else {
-      cb(null, { lat: 32.7014255, lng: 35.2967795 })
+    else {
+      const location = JSON.parse(body).results[0]
+      if (location) {
+        cb(null, JSON.parse(body).results[0].geometry.location)
+      } else {
+        cb(null, { lat: 32.7014255, lng: 35.2967795 })
+      }
     }
   })
 }

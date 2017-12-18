@@ -11,6 +11,7 @@ module.exports = (req, res) => {
     fundingStage: req.body['funding-stage'],
     email: req.body['startup-email'],
     startupWebsite: req.body['startup-website'],
+    logoUrl: req.body['logo-url'],
     signUpReason: req.body['signup-reason']
   });
 

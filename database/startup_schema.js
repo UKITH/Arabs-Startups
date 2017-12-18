@@ -9,7 +9,8 @@ const startupSchema = mongoose.Schema({
   startupSector: {type: String, required: true},
   email: {type: String, required: true},
   fundingStage: {type: String, required: true},
-  startupWebsite: {type: String, required: true},
+  startupWebsite: {type: String, required: true },
+  logoUrl: {type: String, required: true},
   signUpReason: {type: String, required: true}
 });
 startupSchema.plugin(random);
