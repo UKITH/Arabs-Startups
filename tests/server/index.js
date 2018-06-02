@@ -306,3 +306,51 @@ tape('Test if get_event action errors', t => {
     db.close()
   })
 })
+
+tape('Test admin route login page', (t) => {
+  supertest(server).get('/ukithAdmin').end((err, res) => {
+    t.error(err, 'No Error in admin login page');
+    t.end();
+    // will be further tested
+  })
+})
+
+tape('test admin home page', (t) => {
+  supertest(server).get('/u1k2i3t4h5/adminHome').end((err, res) => {
+    t.error(err, 'No Error in admin home');
+    t.end();
+    // will be further tested
+  })
+})
+
+tape('Test admin event form page', (t) => {
+  supertest(server).get('/u1k2i3t4h5/eventForm').end((err, res) => {
+    t.error(err, 'No Error in event form');
+    t.end();
+    // will be further tested
+  })
+})
+
+tape('Test post request of the event form', (t) => {
+  supertest(server).post('/u1k2i3t4h5/registerEvent').end((err, res) => {
+    t.error(err, 'No Error in posting the event form request');
+    t.end();
+    // will be further tested
+  })
+})
+
+tape('Test admin news form', (t) => {
+  supertest(server).get('/u1k2i3t4h5/newsForm').end((err, res) => {
+    t.error(err, 'No Error in news form');
+    t.end();
+    // will be further tested
+  })
+})
+
+tape('Test post request for the news form', (t) => {
+  supertest(server).post('/u1k2i3t4h5/registerNews').end((err, res) => {
+    t.error(err, 'No Error in the event post request');
+    t.end();
+    // will be further tested
+  })
+})
